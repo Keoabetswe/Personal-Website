@@ -1,0 +1,571 @@
+﻿/* ------------------ Header ------------------ */
+*.h1
+{
+	font-family:"Times New Roman", Times, serif;
+	font-size:56px;
+	text-align:center;
+}
+
+/* ------------------ Nav ------------------ */
+#nav
+{
+	background-color:lightgrey;
+	padding:0.2em 0;
+	border-radius:5px;
+}
+
+.nav {
+    border-bottom: 2px solid cornflowerblue;
+    text-align: right; 
+    height: 70px;
+    line-height: 70px;
+}
+
+.nav p
+{
+	color:black;
+	float:left;
+	font-size:19px;
+	margin:0 10px;
+	font-family:"Times New Roman", Times, serif;
+}
+
+
+.nav img
+{
+	float:left;
+	border-radius:10px;
+}
+
+
+
+/* ------------------ Content ------------------ */
+
+body
+{
+	padding:10px;
+	width:90%;
+	margin: 0 auto;
+	background:lightgrey;
+	color:grey;
+	background-color:lightgrey;
+}	
+	
+
+
+#content 
+{
+	border-radius:10px; 
+	Margin-bottom:20px;
+	padding:15px;
+	font-family:"Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: 200px;
+	color:white;
+	background-color:cornflowerblue;
+}
+
+#content .pull-left {
+	margin:0px 10px 10px 0px;
+}
+
+
+#content
+{
+	overflow:auto;
+}
+
+#nav, #feature, #footer, #container
+{
+	margin: 1%;
+	padding:10px;
+	color:white;
+}
+
+.indexText 
+{
+	margin-top:30px;
+}
+
+.blogText
+{
+	text-align:center;
+}
+
+
+
+/* ------------- bullets (about page) ----------*/
+#bullets li
+{
+	display: list-item;
+	text-decoration:none;
+	margin: 2px 2px;
+}
+
+
+/* ------------- Read More ----------*/
+.readMore 
+{
+	color: black;
+	text-decoration:none;
+}
+
+.readMore:hover
+{
+	color:black;
+	text-decoration:none;
+}
+
+i
+{
+	border:solid black;
+	border-width: 0 3px 3px 0;
+	display:inline-block;
+	padding:5px;	
+	cursor:pointer;
+	margin-bottom:10%;
+}
+
+
+/* --- Down Arrow, under read more --- */
+
+.down
+{
+	transform: rotate(45deg);
+	-webkit-transform:rotate(45deg);
+}
+	
+.down a:hover
+{
+	color:lightgrey;
+	transform: rotate(45deg);
+	-webkit-transform:rotate(45deg);
+}
+	
+
+
+
+/* ------------------ Footer ------------------ */
+#footer 
+{
+	border-radius:10px;
+	Padding-top:10px;
+	color:#ffffff;
+	background-color: cornflowerblue;
+}
+
+#footer em
+{
+	float:right;
+	font-size:15px;
+}
+
+#footer:hover em
+{
+	color:cornflowerblue;
+}
+
+
+#footer a 
+{
+	text-decoration:none;
+	color:#ffffff;
+	font-size:16px;	
+}
+
+
+*.fa /* social media icons */
+{
+	border-radius:10px;
+	color:cornflowerblue;
+	Padding-top:5px;
+	Margin:0px 3px 0px 0px;
+	background-color: cornflowerblue;
+}
+
+
+
+
+/* ------------------ Images ------------------ */
+#container img
+{
+	width:100%;
+	height:100%;
+	position:absolute;
+	border-radius:8px;
+} 
+
+
+img.my-dp
+{
+	border-radius:10px;
+	width:250px;
+	height:250px;
+}
+
+/* ------------------ Buttons ------------------ */
+
+h3.read-more
+{
+	border-width:2px;	
+	border-style:groove;
+	width:15%;
+	text-align:center;
+}
+
+h3.read-more:hover
+{
+	color:gray;
+}
+
+
+li
+{
+	display:inline;
+	padding:0.5em 0;
+}
+
+.btn-primary
+{ 
+	background: white;
+	border-color:active;
+	border-radius:5px;
+}
+
+
+.btn-primary:hover 
+{ 
+	background:white;
+	border-color:black; 
+	color: black;
+	cursor:pointer;
+}
+
+.btn-login
+{ 
+	background: cornflowerblue;
+	border-color:white;
+	border-radius:5px;
+}
+
+
+.btn-login:hover 
+{ 
+	background:lightgrey;
+	border-color:grey; 
+	color: black;
+	cursor:pointer;
+}
+
+/* ------------------ Slideshow ------------------ */
+#bubblebox
+{ 
+	width:650px; 
+	height:250px; 
+	margin:50px auto; 
+	border:1px solid #AAA; 
+}
+
+#bubbles
+{ 
+	width:auto; 
+	margin:0px auto; 
+	text-align:center; 
+}
+
+#bubbles > 
+	div
+	{ 
+		display:inline-block; 
+		width:10px; 
+		height:10px; 
+		margin:24px 10px 0px 10px; 
+		background:rgba(0,0,0,.1); 
+		text-align:center; 
+		border:2px solid #999; 
+		border-radius:100%; 
+		font-size:17px; 
+		text-decoration:none; 
+		transition: background 0.3s linear 0s; 
+		cursor:pointer; 
+	}
+	
+#bubblecontent
+{ 
+	margin:0px auto; 
+	transition:opacity 0.3s linear 0s; 
+	font-family:"Times New Roman", Times, serif;
+}
+
+#bubblecontent > 
+	h2
+	{ 
+		text-align:center; 
+		color:#7EA800;
+	}
+	
+#bubblecontent > 
+	p
+	{ 
+		font-size:17px; 
+		line-height:1.5em; 
+		padding:20px 50px; 
+		color:#777; 
+	}
+	
+
+/* ------------------- Lightbox ------------------- */
+
+#gallery img 
+{
+	margin: 12px;
+}
+
+/* ------------- Menu (Screen Sizes) --------------- */
+
+.menu 
+{
+    margin: 0 30px 0 0;
+    padding:5px;
+}
+
+.menu a 
+{
+    clear:right;
+    text-decoration: none;
+    color:white;
+    margin:0 10px;
+    line-height: 30px;
+    background:cornflowerblue;
+   	padding:10px;
+    margin:0 10px;
+}
+
+.menu a:hover
+{
+	color:white;
+	background:grey;
+}
+
+span.home 
+{
+   color: black;
+}
+
+label 
+{
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+
+#toggle 
+{
+    display: none;
+}
+
+
+@media only screen and (max-width: 1000px) 
+{
+    label 
+    {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .menu 
+    {
+        text-align: center;
+        width: 100%;
+        display: none;
+        padding:3px;
+		border-radius:5px;
+		border-color:2px solid black;
+    }
+    .menu a {
+        display: block;
+        z-index:10;
+        position:relative;
+		color: white;
+		border-color:2px solid black;	   
+    }
+
+    
+   #toggle:checked + .menu 
+    {
+        display: block;
+
+	}
+
+		  /* bubble slideshow  */
+		  
+
+		  #bubblecontent
+		  { 
+			  margin:0px auto; 
+			  transition:opacity 0.3s linear 0s; 
+			  font-family:"Times New Roman", Times, serif;
+		  }
+		  
+		  #bubblecontent > 
+			  h2
+			  { 
+				  text-align:center; 
+				  color:#7EA800;
+			  }
+			  
+		  #bubblecontent > 
+			  p
+			  { 
+				  font-size:17px; 
+				  line-height:1.5em; 
+				  padding:20px 50px; 
+				  color:#777; 
+			  }
+			  
+   
+    
+}
+
+
+/* -------------- Sidebar -------------- */
+
+#sidebar 
+{
+	Padding-top: 20px;
+	margin-top:20px;
+	font-weight:normal;
+}
+
+
+.panel-default 
+{
+	background:#D9BF8F;
+	background-color:white;
+	font-family:"Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+
+#sidebar-image .panel-body 
+{ 
+	padding:0px;
+	color:#ffffff;
+	font-family:"Times New Roman", Times, serif;
+}
+
+
+*.panel-default p
+{
+    text-align: justify;
+    font-family:"Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+
+/* ------------------- Forms ------------------- */
+
+input, select, textarea  
+{
+	border: solid 1px #D9BF8F;
+	Margin-top:1px;
+	color:black;
+}
+
+
+.error 
+{
+	color: #f00;
+}
+
+.error-highlight 
+{
+	border: 1px solid #f00;
+}
+
+/* -------------- Sidebar -------------- */
+
+#sidebar 
+{
+	Padding-top: 20px;
+	font-weight:normal;
+}
+
+
+.panel-default 
+{
+	background:#D9BF8F;
+	background-color:silver;
+	font-family:"Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+
+#sidebar-image .panel-body 
+{ 
+	padding:0px;
+	color:#ffffff;
+	font-family:"Times New Roman", Times, serif;
+}
+
+
+*.panel-default p
+{
+    text-align: justify;
+    font-family:"Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+/* -------------- Input Form -------------- */
+
+.input-group {
+  margin: 10px 0px 10px 0px;
+}
+
+.input-login { /* for login form */
+  margin: 10px 0px 10px 0px;
+}
+
+.input-group label {
+  display: block;
+  text-align: center;
+  margin: 3px;
+}
+
+.input-login input { /* for login form */
+  height: 30px;
+  width: 200px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+
+
+.input-group input {
+  height: 20px;
+  width: 500px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.input-group textarea {
+  height: 100px;
+  width: 500px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+

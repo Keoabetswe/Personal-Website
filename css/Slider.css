@@ -1,0 +1,54 @@
+﻿/*Slider CSS*/
+
+body
+{
+	margin:0;
+	padding:0;
+	background:#313131;
+	
+}
+
+.slider
+{
+	width:800px;
+	height:400px;
+	background:url('images/namib-wellness.png');
+	margin:100px auto;
+	animation: slide 20s infinite;
+}
+
+@keyframes slide
+{
+	25%
+	{
+		background:url('\images\namib-banner-small.png"');
+	}  
+	
+	50%
+	{
+		background:url('images\namib-booking.png"');
+	}
+	
+	75%
+	{
+		background:url('images\namib-landscape.png');
+	}
+	
+	
+	100%
+	{
+		background:url('images\namib-rates.png');
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
