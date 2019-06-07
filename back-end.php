@@ -41,22 +41,24 @@
 </head>
 
 <body>
-	<!-- nav bar -->
 	<div class="nav">
-	    <p id="NameHeader" style="font-size:25px;">Keoabetswe <strong>Nthite</strong></p>
+	    <p id="nameHeader">Keoabetswe <strong>Nthite</strong></p>
 
 	    <label for="toggle">&#9776;</label>
 	    <input type="checkbox" id="toggle"/>
 	            
 	    <div class="menu">
-   			<a href="index.html">Home</a>
+		    <a href="index.html">Home</a>
 	        <a href="about.html">About</a>
    	        <a href="blog.php">Blog</a>
 	        <a href="portfolio.php">Portfolio</a>
    	        <a href="contact.php">Contact</a>
 	    </div>
-	    <br/>
+	    
 	</div>
+
+	<!-- break -->
+	<br/>
 
 <!-- Place the whole page in a column narrower than the full screen on a large screen-->
 	<div class="container">

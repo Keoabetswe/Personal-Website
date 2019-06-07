@@ -2,8 +2,22 @@
 *.h1
 {
 	font-family:"Times New Roman", Times, serif;
-	font-size:56px;
+	font-size:50px;
 	text-align:center;
+}
+
+#nameHeader
+{
+	font-size:25px;
+	margin-top: 5px;
+	color:black;
+	float:left;
+	font-family:"Times New Roman", Times, serif;
+}
+
+#contentHeader 
+{
+	text-align: center
 }
 
 /* ------------------ Nav ------------------ */
@@ -21,24 +35,6 @@
     line-height: 70px;
 }
 
-.nav p
-{
-	color:black;
-	float:left;
-	font-size:19px;
-	margin:0 10px;
-	font-family:"Times New Roman", Times, serif;
-}
-
-
-.nav img
-{
-	float:left;
-	border-radius:10px;
-}
-
-
-
 /* ------------------ Content ------------------ */
 
 body
@@ -46,7 +42,6 @@ body
 	padding:10px;
 	width:90%;
 	margin: 0 auto;
-	background:lightgrey;
 	color:grey;
 	background-color:lightgrey;
 }	
@@ -63,16 +58,11 @@ body
     font-weight: 200px;
 	color:white;
 	background-color:cornflowerblue;
+	overflow:auto;
 }
 
 #content .pull-left {
 	margin:0px 10px 10px 0px;
-}
-
-
-#content
-{
-	overflow:auto;
 }
 
 #nav, #feature, #footer, #container
@@ -87,8 +77,9 @@ body
 	margin-top:30px;
 }
 
-.blogText
+.contentText
 {
+	font-size:20px;
 	text-align:center;
 }
 
@@ -148,21 +139,15 @@ i
 /* ------------------ Footer ------------------ */
 #footer 
 {
-	border-radius:10px;
 	Padding-top:10px;
 	color:#ffffff;
 	background-color: cornflowerblue;
 }
 
-#footer em
-{
-	float:right;
-	font-size:15px;
-}
 
-#footer:hover em
+#footer:hover a
 {
-	color:cornflowerblue;
+	color:lightgrey;
 }
 
 
@@ -170,16 +155,16 @@ i
 {
 	text-decoration:none;
 	color:#ffffff;
-	font-size:16px;	
+	text-align: center;
+	display: inline;
+	font-size:20px;	
 }
 
 
 *.fa /* social media icons */
 {
-	border-radius:10px;
 	color:cornflowerblue;
-	Padding-top:5px;
-	Margin:0px 3px 0px 0px;
+	Margin:0px 5px 0px 0px;
 	background-color: cornflowerblue;
 }
 
@@ -196,10 +181,11 @@ i
 } 
 
 
-img.my-dp
+#indexDP
 {
 	border-radius:10px;
 	width:250px;
+	margin-left:10px;
 	height:250px;
 }
 
@@ -225,31 +211,33 @@ li
 	padding:0.5em 0;
 }
 
-.btn-primary
-{ 
-	background: white;
-	border-color:active;
-	border-radius:5px;
-}
-
-
-.btn-primary:hover 
-{ 
-	background:white;
-	border-color:black; 
-	color: black;
-	cursor:pointer;
-}
-
 .btn-login
 { 
 	background: cornflowerblue;
 	border-color:white;
+	color: black;
 	border-radius:5px;
 }
 
 
 .btn-login:hover 
+{ 
+	background:lightgray;
+	border-color:cornflowerblue; 
+	color: black;
+	cursor:pointer;
+}
+
+.btn-contact
+{ 
+	background: lightgray;
+	border-color:white;
+	border-radius:5px;
+	color:black;
+}
+
+
+.btn-contact:hover 
 { 
 	background:lightgrey;
 	border-color:grey; 
@@ -325,7 +313,6 @@ li
 
 .menu 
 {
-    margin: 0 30px 0 0;
     padding:5px;
 }
 
@@ -523,7 +510,7 @@ input, select, textarea
     font-size: 13px;
 }
 
-/* -------------- Input Form -------------- */
+/* -------------- Input Form (login and contact) -------------- */
 
 .input-group {
   margin: 10px 0px 10px 0px;
@@ -532,6 +519,10 @@ input, select, textarea
 .input-login { /* for login form */
   margin: 10px 0px 10px 0px;
 }
+
+.input-contact { /* for contact form */
+	margin: 10px 0px 10px 0px;
+  }
 
 .input-group label {
   display: block;
@@ -548,20 +539,20 @@ input, select, textarea
   border: 1px solid gray;
 }
 
+.input-contact input { /* for contact form */
+	height: 30px;
+	width: 400px;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+  }
 
 
-.input-group input {
-  height: 20px;
-  width: 500px;
-  padding: 5px 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid gray;
-}
 
-.input-group textarea {
+.input-contact textarea {
   height: 100px;
-  width: 500px;
+  width: 400px;
   padding: 5px 10px;
   font-size: 16px;
   border-radius: 5px;

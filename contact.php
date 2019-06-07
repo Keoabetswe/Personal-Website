@@ -1,96 +1,93 @@
 ﻿<!DOCTYPE html>
-<html>
-
+<html lang="en" >
 <head>
- 	<title>Contact</title>
- 	<link href="css/stylesheet.css" rel="stylesheet">
- 	
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-	
-	<!--Calling JavaScript slideshow -->
-	<script type="text/javascript" src="slider.js"></script>
-	
-	<!-- Form code -->
-	<link rel="stylesheet" href="js/jquery-ui.css" />
-	<script src="js/jquery-1.8.3.js"></script>
-	<script src="js/jquery-ui.js"></script>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    
+  <!-- css -->
+	<link href="css/stylesheet.css" rel="stylesheet">
+  
+  	<!--Calling JavaScript slideshow -->
+	<script type="text/javascript" src="js/slider.js"></script>
 
-	
-	<!-- validation -->
-	<script language="javascript" src="js/jquery.validation.js"></script>	
-	
-   <!-- Add icon library -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
- 	<div class="nav">
-	    <p id="NameHeader" style="font-size:25px;">Keoabetswe <strong>Nthite</strong></p>
+	<div class="nav">
+	    <p id="nameHeader">Keoabetswe <strong>Nthite</strong></p>
 
 	    <label for="toggle">&#9776;</label>
 	    <input type="checkbox" id="toggle"/>
 	            
 	    <div class="menu">
-			 <a href="index.html">Home</a>
+		    <a href="index.html">Home</a>
 	        <a href="about.html">About</a>
    	        <a href="blog.php">Blog</a>
 	        <a href="portfolio.php">Portfolio</a>
    	        <a href="contact.php">Contact</a>
 	    </div>
-	    <br/>
+	    
 	</div>
-	
-	<!-- Content row -->
-	<br/><!-- break -->
 
-	<div class="row" id="content">            	 
+
+	<!--  break -->
+	<br/>
+
+	<!-- main content-->
+	<div id="content">           
 		<div id="maincontent" class="col-md-8">
-			
-		<center><h1>Contact</h1></center>
 		
-		
-			<center><p>Please submit your enquiry using the form below or email me at info@keonthite.co.za</p></center>
-			
-					
-			<form action="user_process.php" method="post" id="myform"> 
-			    <center><div class="form-group required-field">
-					<p>Name</p>
-					<input type="text" class="form-control" id="name" placeholder="" name="name">
-				</div>
+		<h2 id="contentHeader">Contact</h2>
 
-				<div class="form-group required-field">
-					<p>Email</p>
-					<input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control" id="email" placeholder="" name="email">
-				</div>
+		<p>Please feel free to contact via the form below or email me at KeoNthite@gmail.com</p>
+
+		<!-- Login Form -->		
+		<form method="post" action="user_process.php">
+				  	<center>
+				  	<div class="input-contact">
+				  		<input type="text" placeholder="Name" name="username">
+				  	</div>
+				  
+					<div class="input-contact">
+				  		<input type="text" placeholder="Email" name="password">
+				  	</div>
+				  	
+				  	<div class="input-contact">
+						  <textarea cols="3" rows="3" placeholder="Message"></textarea>
+				    </div>
 				
-				<div class="form-group required-field">
-					<p>Message</p>
-					<textarea class="form-control" rows="3" placeholder="" id="message" name="message"></textarea>
-				</div>
-  				<div class="form-group">
-					<input name="form-submit" type="submit" value="Submit" class="btn btn-primary submit" />
-				</div></center>
-					
-			</form>
-		</div>
-	
-	<!-- break -->
-	<br/><br/><br/><br/><br/>
-	
+					<div class="input-contact">
+				  		<a href="thank-you.html"><button type="submit" class="btn btn-contact submit" name="contact-form">Submit</button></a>
+					</div>
+					</center>
+				  </form>				
+		
+
+
+<!-- break -->
+<br><br><br><br><br><br><br><br><br><br><br>
+		  	
+
+	<!-- content -->	
+	</div>
+
 	<!-- footer -->
-	<div class="row">
-		<div id="footer" class="col-lg-12">
-			<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook" target="_blank"></a> 
-				<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram" target="_blank"></a> 
-				<a href="https://www.linkedin.com/in/keoabetswe-nthite-a4a6b3ab/" class="fa fa-linkedin" title="LinkedIn" target="_blank"></a> 
-				<a href="https://github.com/Keoabetswe" class="fa fa-github" title="Github" target="_blank"></a> 				
-				<a href="contact.php" class="fa fa-envelope" title="Email" target="_blank"></a></center>
-			
-		</div>
+	<div id="footer" class="col-lg-12">
+	   	<small>
+			<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook"></a> 
+			<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram"></a> 
+			<a href="https:linkedin.com/KeoabetsweNthite" class="fa fa-linkedin" title="LinkedIn"></a> 
+			<a href="https:linkedin.com/KeoabetsweNthite" class="fa fa-github" title="Github"></a> 
+			<a href="contact.php" class="fa fa-envelope" title="Email"></a></center>
+		</small>
 	</div>
 
-	<!-- closes content tag  -->
-	</div>
+
 </body>
-
 </html>

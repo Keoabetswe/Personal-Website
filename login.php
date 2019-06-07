@@ -72,7 +72,7 @@
 				<div id="content" style="background-color:lightgrey;">
 				
 				<!-- Login Form -->		
-				 <form method="post" action="back-end.php">
+				 <form method="post" action="user_process.php">
 				  	<center>
 				  	<div class="input-login">
 				  		<input type="text" placeholder="Username" name="username">
