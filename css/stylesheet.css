@@ -524,6 +524,12 @@ input, select, textarea
 	margin: 10px 0px 10px 0px;
   }
 
+  
+.input-primary { /* for any form of choice */
+	margin: 10px 0px 10px 0px;
+  }
+
+
 .input-group label {
   display: block;
   text-align: center;
@@ -547,6 +553,16 @@ input, select, textarea
 	border-radius: 5px;
 	border: 1px solid gray;
   }
+
+  .input-primary input { /* any button of choice */
+	height: 30px;
+	width: 400px;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+  }
+
 
 
 
