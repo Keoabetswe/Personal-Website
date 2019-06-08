@@ -10,7 +10,7 @@ $db = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 
 
 //Contact Form
-if (isset($_POST['submit-form'])) 
+if (isset($_POST['contact-form'])) 
 {
   // receives all input values from the upcoming classes form
   $name = mysqli_real_escape_string($db, $_POST['name']);
@@ -18,12 +18,12 @@ if (isset($_POST['submit-form']))
   $message = mysqli_real_escape_string($db, $_POST['message']);
   
   //Sends Email to CPanel
-  /*$to = "info@keonthite.co.za";
+  $to = "info@keonthite.co.za";
   $subject = "Personal Website Enquiry";
 
   $sendEmail = mail($to, $subject, $message);
   
-  if($sendEmail)
+  /*if($sendEmail)
   {
   	 $response = "Your enquiry was successfully sent :)";
   }
@@ -52,36 +52,18 @@ if (isset($_POST['login-form']))
   $user = mysqli_real_escape_string($db, $_POST['username']);
   $pass = mysqli_real_escape_string($db, $_POST['password']);
   
-//inserts into login tbl
-$login_query = "SELECT * FROM users WHERE username = '$user' AND password = '$pass';
-mysqli_query($db, $login_query);
+  //inserts into login tbl
+  $login_query = "SELECT * FROM users WHERE username = '$user' AND password = '$pass'";
+  mysqli_query($db, $login_query);
 
 
-//redirects user to thank you page
-header('location:back-end.php'); 	
-}
-
-/* -------------------------------------------------------------------------*/
-//Blog Form (Back-End)
-if (isset($_POST['blog-form'])) 
-{
-  // receives all input values from the upcoming classes form
-  $title = mysqli_real_escape_string($db, $_POST['blog_title']);
-  $date = getdate(); //gets current system date
-  $entry = mysqli_real_escape_string($db, $_POST['blog_entry']);   
- 
-  
-//inserts into blog post tbl
-$blog_form = "INSERT INTO blog_posts(blog_id,blog_title,blog_date, blog_entry) VALUES('$title','$date', '$entry')";
-mysqli_query($db, $blog_form);  	
-
-//redirects user to # page
-header('location:#.html'); 	
+  //redirects user to thank you page
+  header('location:back-end.php'); 	
 }
 
 /* -------------------------------------------------------------------------*/
 //Project Form (Back-End)
-if (isset($_POST['project-form'])) 
+if (isset($_POST['portfolio-form'])) 
 {
   // receives all input values from the upcoming classes form
   $pro_title = mysqli_real_escape_string($db, $_POST['project_title']);
@@ -96,7 +78,7 @@ if (isset($_POST['project-form']))
 
   
 //inserts into projects tbl
-$blog_form = "INSERT INTO projects(project_title,project_type,project_name,project_desc, project_date,project_language,project_image,project_contributors) VALUES('$pro_title','$pro_type','$pro_name','$pro_description', '$pro_'date,'$pro_lang','$pro_img','$pro_contributors')";
+$blog_form = "INSERT INTO projects(project_title,project_type,project_name,project_desc, project_date,project_language,project_image,project_contributors) VALUES('$pro_title','$pro_type','$pro_name','$pro_description', '$pro_date','$pro_lang','$pro_img','$pro_contributors')";
 mysqli_query($db, $blog_form);  	
 
 //redirects user to # page
