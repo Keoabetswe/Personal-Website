@@ -83,7 +83,7 @@
 				  	</div>
 				  	
 				  	<div class="input-login">
-				  		<a href="back-end.php"><button type="submit" class="btn btn-login submit" name="login-form">Login</button></a>
+					  <input type="submit" class="btn btn-login submit" name="login-form" value="Login"/>
 				  	</div></center>
 				  </form>				
 			</div>		

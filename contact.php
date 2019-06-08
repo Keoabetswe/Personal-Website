@@ -49,24 +49,23 @@
 
 		<!-- Login Form -->		
 		<form method="post" action="user_process.php">
-				  	<center>
-				  	<div class="input-contact">
-				  		<input type="text" placeholder="Name" name="username">
-				  	</div>
+			<center>
+			<div class="input-contact">
+				<input type="text" placeholder="Name" name="name">
+			</div>
 				  
-					<div class="input-contact">
-				  		<input type="text" placeholder="Email" name="password">
-				  	</div>
+			<div class="input-contact">
+				<input type="text" placeholder="Email" name="email">
+			</div>
 				  	
-				  	<div class="input-contact">
-						  <textarea cols="3" rows="3" placeholder="Message"></textarea>
-				    </div>
+			<div class="input-contact">
+			  <textarea cols="3" rows="3" placeholder="Message" name="message"></textarea>
+			</div>
 				
-					<div class="input-contact">
-				  		<a href="thank-you.html"><button type="submit" class="btn btn-contact submit" name="contact-form">Submit</button></a>
-					</div>
-					</center>
-				  </form>				
+			<div class="input-contact">
+				<input type="submit" class="btn btn-contact submit" name="contact-form" value="Submit"/>
+			</center>
+		 </form>				
 		
 
 
