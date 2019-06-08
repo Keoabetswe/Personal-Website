@@ -92,7 +92,7 @@
 								
 				</table>
 				
-					<center><a href="#"><button type="submit" class="btn btn-backend submit" name="login-form">Create Project</button></a></center>			
+					<center><input type="submit" class="btn btn-primary submit" name="project-form" value="Create Project"/></center>			
 			</div>			
 		</div>		
 	</div>
