@@ -32,7 +32,6 @@
 	        <a href="portfolio.php">Portfolio</a>
    	        <a href="contact.php">Contact</a>
 	    </div>
-	    
 	</div>
 
 
@@ -41,11 +40,14 @@
 
 	<!-- main content-->
 	<div id="content">           
-		<div id="maincontent" class="col-md-8">
+		<div id="maincontent">
 		
 		<h2 id="contentHeader">Contact</h2>
 
-		<p>Please feel free to contact via the form below or email me at KeoNthite@gmail.com</p>
+		<center><p id="contentBody">Please feel free to contact via the form below or email me at KeoNthite@gmail.com</p></center>
+
+		<!-- break -->
+		<br/>
 
 		<!-- Login Form -->		
 		<form method="post" action="user_process.php">
@@ -63,30 +65,26 @@
 			</div>
 				
 			<div class="input-contact">
-				<input type="submit" class="btn btn-contact submit" name="contact-form" value="Submit"/>
+				<input type="submit" class="btn btn-contact submit" name="contact" value="Submit"/>
 			</center>
-		 </form>				
-		
+		</form>				
+					
+		<!-- maincontent -->	
+		</div>
 
+		<!-- footer -->
+		<div id="footer" class="col-lg-12">
+			<small>
+				<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook"></a> 
+				<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram"></a> 
+				<a href="https:linkedin.com/KeoabetsweNthite" class="fa fa-linkedin" title="LinkedIn"></a> 
+				<a href="https:linkedin.com/KeoabetsweNthite" class="fa fa-github" title="Github"></a> 
+				<a href="contact.php" class="fa fa-envelope" title="Email"></a></center>
+			</small>
+		</div>
 
-<!-- break -->
-<br><br><br><br><br><br><br><br><br><br><br>
-		  	
-
-	<!-- content -->	
+	<!-- closes content -->
 	</div>
-
-	<!-- footer -->
-	<div id="footer" class="col-lg-12">
-	   	<small>
-			<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook"></a> 
-			<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram"></a> 
-			<a href="https:linkedin.com/KeoabetsweNthite" class="fa fa-linkedin" title="LinkedIn"></a> 
-			<a href="https:linkedin.com/KeoabetsweNthite" class="fa fa-github" title="Github"></a> 
-			<a href="contact.php" class="fa fa-envelope" title="Email"></a></center>
-		</small>
-	</div>
-
 
 </body>
 </html>
