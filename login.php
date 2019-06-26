@@ -83,7 +83,7 @@
 				  	</div>
 				  	
 				  	<div class="input-login">
-					  <input type="submit" class="btn btn-login submit" name="login-form" value="Login"/>
+					  <input type="submit" class="btn btn-login submit" name="login" value="Login"/>
 				  	</div></center>
 				  </form>				
 			</div>		

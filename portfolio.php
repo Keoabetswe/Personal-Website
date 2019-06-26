@@ -31,25 +31,22 @@
    	        <a href="blog.php">Blog</a>
 	        <a href="portfolio.php">Portfolio</a>
    	        <a href="contact.php">Contact</a>
-	    </div>
-	    
+	    </div>	    
 	</div>
-
 
 	<!--  break -->
 	<br/>
 
 	<!-- main content-->
 	<div id="content">           
-		<div id="maincontent" class="col-md-8">
+		<div id="maincontent">
 			
 			
 		<h2 id="contentHeader">Portfolio</h2>
-		<p>Coming Soon...Previous and Current Projects</p>
-		   
-
-<!-- break -->
-<br><br><br><br><br><br><br><br><br><br><br>
+		<center><p id="contentBody">Coming Soon...complete and current Projects</p></center>
+			
+		<!-- break -->
+		<br><br><br><br><br><br><br><br><br><br><br>
 		  	
 	<!-- closes maincontent -->			
 	</div>
@@ -65,7 +62,7 @@
 		</small>
 	</div>
 
-	<!-- content -->	
+	<!-- closes content -->
 	</div>
 
 </body>

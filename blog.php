@@ -41,18 +41,16 @@
 
 	<!-- main content-->
 	<div id="content">           
-		<div  class="col-md-8">
-			
-			
+		<div id="maincontent">           
+				
 		<h2 id="contentHeader">Blog</h2>
-		<p id="contentText">Coming Soon...Embeded blogs from Medium</p>
+		<center><p id="contentBody">Coming Soon...blogs from Medium</p></center>
 		   
-
-	<!-- break -->
-	<br><br><br><br><br><br><br><br><br><br><br>
-		  	
-	<!-- closes maincontent -->			
-	</div>
+		<!-- break -->
+		<br><br><br><br><br><br><br><br><br><br><br>
+				
+		<!-- closes maincontent -->			
+		</div>
 
 	<!-- footer -->
 	<div id="footer" class="col-lg-12">
@@ -65,8 +63,7 @@
 		</small>
 	</div>
 
-</div>
-	<!-- content -->	
+	<!-- closes content -->	
 	</div>
 
 </body>

@@ -71,10 +71,10 @@
 		</div>
 		
 		<!-- Content row -->
-		<div class="row" id="content" style="background-color:lightgrey;">            
+		<div id="content" style="background-color:lightgrey;">            
 			<div id="maincontent" >		
 			
-				<h1>Projects</h1>
+				<h1 >Projects</h1>
 				<table class="table table-bordered table-hover">
 					<tr>
 						<th width="10%">Project Num</th>
@@ -84,14 +84,12 @@
 						<th width="5">Language(s)</th>
 						<th width="15%">Contributor(s)</th>		
 						<th width="7%">Image</th>
-			
 													
 						<th width="10%">Action</th>
 
 					</tr>
 								
 				</table>
-				
 					<center><input type="submit" class="btn btn-primary submit" name="project-form" value="Create Project"/></center>			
 			</div>			
 		</div>		
