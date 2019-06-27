@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `blog_posts`
 --
 
-DROP TABLE IF EXISTS `blog_posts`;
-CREATE TABLE IF NOT EXISTS `blog_posts` (
+DROP TABLE IF EXISTS `blogs`;
+CREATE TABLE IF NOT EXISTS `blogs` (
   `blog_id` int(11) NOT NULL AUTO_INCREMENT,
   `blog_title` varchar(50) NOT NULL,
   `blog_date` date NOT NULL,
@@ -43,11 +43,10 @@ CREATE TABLE IF NOT EXISTS `blog_posts` (
 -- Table structure for table `contact_form`
 --
 
-DROP TABLE IF EXISTS `contact_form`;
-CREATE TABLE IF NOT EXISTS `contact_form` (
+DROP TABLE IF EXISTS `contact`;
+CREATE TABLE IF NOT EXISTS `contact` (
   `form_id` int(11) NOT NULL AUTO_INCREMENT,
   `form_name` varchar(50) NOT NULL,
-  `form_surname` varchar(50) NOT NULL,
   `form_email` varchar(50) NOT NULL,
   `form_date` date NOT NULL,
   `form_message` varchar(500) NOT NULL,
