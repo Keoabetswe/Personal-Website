@@ -109,26 +109,29 @@ body
 }
 	
 /* ------------------ Footer ------------------ */
-#footer a 
+#footer 
 {
 	text-decoration:none;
-	color:#ffffff;
+	color:white;
 	text-align: center;
 	display: inline;
-	font-size:20px;	
+	font-size:30px;	
 }
+
+
 
 #footer:hover 
 {
 	color:grey;
 }
 
-*.fa /* social media icons */
+.fa /* social media icons */
 {
 	color:cornflowerblue;
 	Margin:0px 5px 0px 0px;
 	background-color: cornflowerblue;
 }
+
 
 /* ------------------ Images ------------------ */
 #container img
@@ -307,7 +310,7 @@ li
 	margin: 12px;
 }
 
-/* ------------- Menu (Screen Sizes) --------------- */
+/* ------------- Menu --------------- */
 
 .menu 
 {
@@ -319,7 +322,6 @@ li
     clear:right;
     text-decoration: none;
     color:white;
-    margin:0 10px;
     line-height: 30px;
     background:cornflowerblue;
    	padding:10px;
@@ -339,7 +341,7 @@ span.home
 
 label 
 {
-    margin: 0 40px 0 0;
+    margin: 0 30px 0 0;
     font-size: 26px;
     line-height: 70px;
     display: none;
@@ -352,7 +354,7 @@ label
     display: none;
 }
 
-
+/* ------------- Mobile (Screen Sizes) --------------- */
 @media only screen and (max-width: 1000px) 
 {
     label 
@@ -364,13 +366,15 @@ label
     .menu 
     {
         text-align: center;
-        width: 100%;
+        width: 90%;
         display: none;
         padding:3px;
 		border-radius:5px;
 		border-color:2px solid black;
     }
-    .menu a {
+	
+	.menu a 
+	{
         display: block;
         z-index:10;
         position:relative;
@@ -385,14 +389,44 @@ label
 
 	}
 
-		  /* bubble slideshow  */
+		  /* mobile screen bubble slideshow  */
+		  #bubblebox
+		  { 
+			  width:350px; 
+			  height:250px; 
+			  margin:50px auto; 
+			  border:1px solid #AAA; 
+		  }
 		  
-
+		  #bubbles
+		  { 
+			  width:auto; 
+			  margin:0px auto; 
+			  text-align:center; 
+		  }
+		  
+		  #bubbles > 
+			  div
+			  { 
+				  display:inline-block; 
+				  width:10px; 
+				  height:10px; 
+				  margin:24px 10px 0px 10px; 
+				  background:rgba(0,0,0,.1); 
+				  text-align:center; 
+				  border:2px solid #999; 
+				  border-radius:100%; 
+				  font-size:17px; 
+				  text-decoration:none; 
+				  transition: background 0.3s linear 0s; 
+				  cursor:pointer; 
+			  }
+			  
 		  #bubblecontent
 		  { 
 			  margin:0px auto; 
 			  transition:opacity 0.3s linear 0s; 
-			  font-family:"Times New Roman", Times, serif;
+			  font-family:"Times New Roman, Times, serif";
 		  }
 		  
 		  #bubblecontent > 
