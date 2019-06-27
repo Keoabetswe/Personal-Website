@@ -23,6 +23,7 @@ $users = 'create table users(
 $contact_form = 'create table contact(
 				form_id int NOT NULL Primary Key AUTO_INCREMENT,
 				form_name varchar(50) NOT NULL,
+				form_surname varchar(50) NOT NULL,
 				form_email varchar(50) NOT NULL,
 				form_date date NOT NULL,
 				form_message varchar(500) NOT NULL)';
