@@ -2,9 +2,9 @@
 
 // connects to the database
 $db_host="localhost";	
-$db_username="root";	
-$db_password="";	
-$db_name="personal_website";
+$db_username="keontuzb";	
+$db_password="keontuzb_keo";	
+$db_name="keontuzb_website";
 
 $db = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
 
@@ -19,8 +19,8 @@ if (isset($_POST['contact']))
   $message = mysqli_real_escape_string($db, $_POST['message']);
   
   //Sends Email to CPanel
-  //$to = "info@keonthite.co.za";
-  //$subject = "Personal Website Enquiry";
+  //$to = "info@keonthite.co.za"; 
+  //$subject = "Personal Website Enquiry"; 
 
   //$sendEmail = mail($to, $subject, $message);
   
@@ -34,7 +34,7 @@ if (isset($_POST['contact']))
   }*/
   
 //inserts into contact tbl
-$contact_form = "INSERT INTO contact_form (contact_name,contact_email, contact_date, contact_message) VALUES('$name','$email','$date','$message')";
+$contact_form = "INSERT INTO contact(contact_name,contact_email, contact_date, contact_message) VALUES('$name','$email','$date','$message')";
 mysqli_query($db, $contact_form);  	
 
 
@@ -45,7 +45,7 @@ header('location:thank-you.html');
 
 /* --------------------------------------------------------------------------*/
 //Login Form (Back-End)
-if (isset($_POST['login'])) 
+/*if (isset($_POST['login'])) 
 {
   // receives all input values from the upcoming classes form
   $user = mysqli_real_escape_string($db, $_POST['username']);
@@ -57,12 +57,12 @@ if (isset($_POST['login']))
 
 
   //redirects user to thank you page
-  header('location:back-end.php'); 	
-}
+  header('location:back-end.php'); 
+}	*/
 
 /* -------------------------------------------------------------------------*/
 //Project Form (Back-End)
-if (isset($_POST['portfolio'])) 
+/*if (isset($_POST['portfolio'])) 
 {
   // receives all input values from the upcoming classes form
   $pro_title = mysqli_real_escape_string($db, $_POST['project_title']);
@@ -82,7 +82,7 @@ mysqli_query($db, $portfolio);
 
 //redirects user to # page
 header('location:#.html'); 	
-}
+}*/
 
 
 
