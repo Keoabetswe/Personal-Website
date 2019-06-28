@@ -76,13 +76,35 @@
 				 <form method="post" action="user_process.php">
 				  	<center>
 				  	<div class="input-group">
+					  	<input type="text" placeholder="Project Num" name="name">
+					</div>
+					  
+				  	<div class="input-group">
+					  <input type="text" placeholder="Project Type" name="name">
+				    </div>
+					  
+					<div class="input-group">
+					  <input type="text" placeholder="Project Name" name="name">
+					</div>
 
-				  		<input type="text" placeholder="Username" name="name">
-				  	</div>
-				  	<div class="input-group">
-				  		<input type="password" placeholder="Password" name="Password">
-				  	</div>
-				  	<div class="input-group">
+					  
+					<div class="input-group">
+					  <input type="text" placeholder="Duration" name="name">
+					</div>
+					  
+					<div class="input-group">
+					  <input type="text" placeholder="Language(s)" name="name">
+					</div>
+					  
+					<div class="input-group">
+					  <input type="text" placeholder="Contributor(s)" name="name">
+					</div>
+					  
+					<div class="input-group">
+					  	<input type="file" id="image" name="item_image" accept="images/*" ><!-- adds an image --></td>
+					</div>	
+
+					  <div class="input-group">
 				  		<button type="submit" class="btn btn-backend submit" name="create" style="width:70px;">Submit</button>
 				  		<button type="submit" class="btn" name="cancel">Cancel</button>						  		
 				  	</div></center>
