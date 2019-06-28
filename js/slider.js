@@ -4,8 +4,8 @@ function _(x){return document.getElementById(x);}
 var ba, bi=0, intrvl;
 // bca - Bubble Content Array. Put your content here.
 var bca = [
-    '<h2>Heading Number 1</h2><p>TBD</p>',
-	'<h2>Heading Number 2</h2><p>Work In Progress</p>',
+    '<h2>Heading Number 1</h2><p>Skills</p>',
+	'<h2>Heading Number 2</h2><p>Qualification</p>',
 	'<h2>Heading Number 3</h2><p>Content for section 3</p>',
 	
 ];
