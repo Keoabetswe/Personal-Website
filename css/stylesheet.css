@@ -6,6 +6,14 @@
 	text-align:center;
 }
 
+#sliderContent 
+{
+	text-align: center;
+	font-size:25px;
+	color:black;
+	font-family:"Times New Roman, Times, serif";
+}
+
 #nameHeader
 {
 	font-size:25px;
@@ -118,16 +126,16 @@ body
 	font-size:30px;	
 }
 
-
-
 #footer:hover 
 {
+	text-decoration: none;
 	color:grey;
 }
 
 .fa /* social media icons */
 {
-	color:cornflowerblue;
+	text-decoration: none;
+	color:white;
 	Margin:0px 5px 0px 0px;
 	background-color: cornflowerblue;
 }
@@ -291,7 +299,7 @@ li
 	h2
 	{ 
 		text-align:center; 
-		color:#7EA800;
+		color:cornflowerblue;
 	}
 	
 #bubblecontent > 
@@ -303,13 +311,6 @@ li
 		color:#777; 
 	}
 	
-/* ------------------- Lightbox ------------------- */
-
-#gallery img 
-{
-	margin: 12px;
-}
-
 /* ------------- Menu --------------- */
 
 .menu 
@@ -359,6 +360,7 @@ label
 {
     label 
     {
+		margin: 4px 0px 0px 4px;
         display: block;
         cursor: pointer;
     }
@@ -366,7 +368,7 @@ label
     .menu 
     {
         text-align: center;
-        width: 90%;
+        width: 100%;
         display: none;
         padding:3px;
 		border-radius:5px;
@@ -392,7 +394,7 @@ label
 		  /* mobile screen bubble slideshow  */
 		  #bubblebox
 		  { 
-			  width:350px; 
+			  width:300px; 
 			  height:250px; 
 			  margin:50px auto; 
 			  border:1px solid #AAA; 
@@ -433,7 +435,7 @@ label
 			  h2
 			  { 
 				  text-align:center; 
-				  color:#7EA800;
+				  color:cornflowerblue;
 			  }
 			  
 		  #bubblecontent > 
