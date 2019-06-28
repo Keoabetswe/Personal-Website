@@ -125,7 +125,6 @@
 						</tr>
 						
 						<tr>
-
 						<td><input type="file" id="image" name="item_image" accept="images/*" ><!-- adds an image --></td>
 						</tr>
 						
