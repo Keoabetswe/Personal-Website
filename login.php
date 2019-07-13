@@ -1,4 +1,10 @@
-﻿<html>
+﻿<?php 
+include('user_process.php');
+
+?> 
+
+
+<html>
  <head>
 	<title>Login</title>
 	
@@ -66,20 +72,22 @@
 		
 		<br/>
 		<!-- Content row -->
-		<div class="row" id="content" style="background-color:lightgrey;">            
+		<div class="row" action="user_process" style="background-color:lightgrey;">            
 			<div id="maincontent" >		
-
 				<div id="content" style="background-color:lightgrey;">
 				
 				<!-- Login Form -->		
 				 <form method="post" action="user_process.php">
 				  	<center>
+					<!-- displays errors -->
+					<?php include('errors.php'); ?>
+					
 				  	<div class="input-login">
-				  		<input type="text" placeholder="Username" name="username">
+				  		<input type="text" placeholder="Username" name="username" required="required">   
 				  	</div>
 				  
 					<div class="input-login">
-				  		<input type="password" placeholder="Password" name="password">
+				  		<input type="password" placeholder="Password" name="password" required="required">
 				  	</div>
 				  	
 				  	<div class="input-login">
