@@ -45,12 +45,12 @@ CREATE TABLE IF NOT EXISTS `blogs` (
 
 DROP TABLE IF EXISTS `contact`;
 CREATE TABLE IF NOT EXISTS `contact` (
-  `form_id` int(11) NOT NULL AUTO_INCREMENT,
-  `form_name` varchar(50) NOT NULL,
-  `form_email` varchar(50) NOT NULL,
-  `form_date` date NOT NULL,
-  `form_message` varchar(500) NOT NULL,
-  PRIMARY KEY (`form_id`)
+  `contact_id` int(11) NOT NULL AUTO_INCREMENT,
+  `contact_name` varchar(50) NOT NULL,
+  `contact_email` varchar(50) NOT NULL,
+  `contact_date` date NOT NULL,
+  `contact_message` varchar(500) NOT NULL,
+  PRIMARY KEY (`contact_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
