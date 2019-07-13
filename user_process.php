@@ -1,13 +1,14 @@
 <?php
+// initializing variable
+$errors = array(); 
 
 // connects to the database
 $db_host="localhost";	
-$db_username="keontuzb";	
-$db_password="keontuzb_keo";	
-$db_name="keontuzb_website";
+$db_username="root";	
+$db_password="";	
+$db_name="personal_website";
 
 $db = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
-
 
 //Contact Form
 if (isset($_POST['contact'])) 
@@ -37,35 +38,46 @@ if (isset($_POST['contact']))
 $contact_form = "INSERT INTO contact(contact_name,contact_email, contact_date, contact_message) VALUES('$name','$email','$date','$message')";
 mysqli_query($db, $contact_form);  	
 
-
 //redirects user to thank you page
 header('location:thank-you.html'); 	
 }
 
-
 /* --------------------------------------------------------------------------*/
 //Login Form (Back-End)
-/*if (isset($_POST['login'])) 
+if (isset($_POST['login'])) 
 {
   // receives all input values from the upcoming classes form
   $user = mysqli_real_escape_string($db, $_POST['username']);
   $pass = mysqli_real_escape_string($db, $_POST['password']);
-  
-  //inserts into login tbl
-  $login_query = "SELECT * FROM users WHERE username = '$user' AND password = '$pass'";
-  mysqli_query($db, $login_query);
 
-
-  //redirects user to thank you page
-  header('location:back-end.php'); 
-}	*/
+  if (count($errors) == 0) 
+  {
+      //$password = md5($password);
+        //inserts into login tbl
+      $login_query = "SELECT * FROM users WHERE username='$user' AND password = '$pass'";
+      $results = mysqli_query($db, $login_query);
+      
+      if (mysqli_num_rows($results) == 1) 
+      {
+          $row = mysqli_fetch_array($results); //collects user row info
+          $_SESSION['username'] = $name; //stores name for indicating user in a header
+          $_SESSION['loggedIn'] = true;	//stores in user login status
+          header('location: back-end.php');
+      }
+      else 
+      {
+          array_push($errors, "Incorrect username/password combination");
+          echo '<script>alert("Incorrect username/password combination")</script>';
+          header('location: login.php');
+      }
+  }
+}	
 
 /* -------------------------------------------------------------------------*/
 //Project Form (Back-End)
-/*if (isset($_POST['portfolio'])) 
+if (isset($_POST['create'])) 
 {
   // receives all input values from the upcoming classes form
-  $pro_title = mysqli_real_escape_string($db, $_POST['project_title']);
   $pro_type = mysqli_real_escape_string($db, $_POST['project_type']);
   $pro_name = mysqli_real_escape_string($db, $_POST['project_name']);
   $pro_description = mysqli_real_escape_string($db, $_POST['project_desc']);    
@@ -75,14 +87,13 @@ header('location:thank-you.html');
   $pro_contributors = mysqli_real_escape_string($db, $_POST['project_contributors']);        
 
 
-  
 //inserts into projects tbl
-$portfolio = "INSERT INTO projects(project_title,project_type,project_name,project_desc, project_date,project_language,project_image,project_contributors) VALUES('$pro_title','$pro_type','$pro_name','$pro_description', '$pro_date','$pro_lang','$pro_img','$pro_contributors')";
+$portfolio = "INSERT INTO projects(project_type,project_name,project_desc, project_date,project_language,project_image,project_contributors) VALUES('$pro_title','$pro_type','$pro_name','$pro_description', '$date','$pro_lang','$pro_img','$pro_contributors')";
 mysqli_query($db, $portfolio);  	
 
 //redirects user to # page
-header('location:#.html'); 	
-}*/
+header('location:back-end.html'); 	
+}
 
 
 
