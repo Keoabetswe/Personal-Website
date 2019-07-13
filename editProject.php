@@ -1,4 +1,47 @@
-﻿<html>
+﻿<?php
+session_start();
+
+// connection string
+$db_host="localhost";	
+$db_username="root";	
+$db_password="";	
+$db_name="personal_website";
+
+$db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+
+if(isset($_GET["id"]))
+{
+	$query = "SELECT * FROM projects WHERE project_id = ".$_GET['id'];
+	$result = mysqli_query($db_connect, $query);
+	$editProject = mysqli_fetch_array($result);	//collects item row info
+}
+
+if(isset($_POST['update']))
+{
+	//stores updated values
+	$id = $_POST['id'];
+	$desc = $_POST['type'];	
+	$cost_price = $_POST['name'];
+	$quantity = $_POST['description'];		
+	$sell_price = $_POST['date'];	
+	$image = $_POST['language'];		
+	$image = $_POST['image'];
+	$image = $_POST['contributors'];				
+	
+	$update_query = "UPDATE projects set Description = '$desc', CostPrice ='$cost_price', Quantity ='$quantity', SellPrice ='$sell_price', Image ='$image' WHERE ItemID = '$id'";
+	$result = mysqli_query($db_connect,$update_query);
+	header("location: back-end.php");
+}
+
+if(isset($_POST['cancel']))
+{
+	//re-direct to admin page
+	header("location: back-end.php");
+}
+
+?>
+
+<html>
  <head>
 	<title>Edit Project</title>
 	
@@ -46,13 +89,14 @@
 	    <label for="toggle">&#9776;</label>
 	    <input type="checkbox" id="toggle"/>
 	            
-	    <div class="menu">
-   			<a href="index.html">Home</a>
-	        <a href="about.html">About</a>
-   	        <a href="blog.php">Blog</a>
-	        <a href="portfolio.php">Portfolio</a>
-   	        <a href="contact.php">Contact</a>
-	    </div>
+		<div class="menu">
+		   	 <!-- logged in Admin -->
+			<?php if(isset($_SESSION['username'])) : ?>
+  			 <a href="login.php?logout='1'" style="color: red; background:grey;">logout</a>
+			 <?php endif ?>
+		</div>
+		
+		<!-- break -->
 	    <br/>
 	</div>
 
@@ -74,40 +118,97 @@
 			<div id="content" style="background-color:lightgrey;">
 				<!-- Login Form -->		
 				 <form method="post" action="user_process.php">
-				  	<center>
-				  	<div class="input-group">
-					  	<input type="text" placeholder="Project Num" name="name">
-					</div>
-					  
-				  	<div class="input-group">
-					  <input type="text" placeholder="Project Type" name="name">
-				    </div>
-					  
-					<div class="input-group">
-					  <input type="text" placeholder="Project Name" name="name">
-					</div>
+				 <center><table cellpadding="2" cellspacing="2">
+							
+					    <tr>
+							<td>Project Num</td>
+							<td>
+								<div class="input-login">
+									<input type="hidden" name="id" value="<?php echo $editProject['project_id'];?>">
+							  	</div>
 
-					  
-					<div class="input-group">
-					  <input type="text" placeholder="Duration" name="name">
-					</div>
-					  
-					<div class="input-group">
-					  <input type="text" placeholder="Language(s)" name="name">
-					</div>
-					  
-					<div class="input-group">
-					  <input type="text" placeholder="Contributor(s)" name="name">
-					</div>
-					  
-					<div class="input-group">
-					  	<input type="file" id="image" name="item_image" accept="images/*" ><!-- adds an image --></td>
-					</div>	
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Project Type</td>
+							<td>
+								<div class="input-login">
+									<input type="text" name="type" value="<?php echo $editProject['project_type'];?>">
+							  	</div>
 
-					  <div class="input-group">
-				  		<button type="submit" class="btn btn-backend submit" name="create" style="width:70px;">Submit</button>
-				  		<button type="submit" class="btn" name="cancel">Cancel</button>						  		
-				  	</div></center>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Project Name</td>
+							<td>
+								<div class="input-login">
+									<input type="text" name="name" value="<?php echo $editProject['project_name'];?>">
+							  	</div>
+
+							</td>
+						</tr>
+
+						<tr>
+							<td>Description</td>
+							<td>
+								<div class="input-login">
+									<input type="text" name="description" value="<?php echo $editProject['project_desc'];?>">
+							  	</div>
+
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Project Date</td>
+							<td>
+								<div class="input-login">
+									<input type="text" name="date" value="<?php echo $editProject['project_date'];?>">
+							  	</div>
+
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Language(s)</td>
+							<td>
+								<div class="input-login">
+									<input type="text" name="language" value="<?php echo $editProject['project_language'];?>">
+							  	</div>
+
+							</td>
+						</tr>
+
+								
+						<tr>
+							<td>Contributor(s)</td>
+							<td>
+								<div class="input-login">
+									<input type="text" name="contributors" value="<?php echo $editProject['project_contributors'];?>">
+							  	</div>
+
+							</td>
+						</tr>
+
+						<tr>
+							<td>Project Image</td>
+							<td>
+								<div class="input-group">
+									<input type="file" id="image" name="image" accept="images/*" ><!-- adds an image -->
+							  	</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td>&nbsp;</td>
+							<td>
+							<div class="input-login">
+								<button type="submit" class="btn btn-backend submit" name="update" style="width:70px;">Submit</button>
+								<button type="submit" class="btn" name="cancel">Cancel</button>							  				
+							</td>
+						</tr>
+					</table></center>
 			  </form>				
 			</div>		
 		</div>
