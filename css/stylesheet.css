@@ -36,7 +36,8 @@
 	border-radius:5px;
 }
 
-.nav {
+.nav 
+{
     border-bottom: 2px solid cornflowerblue;
     text-align: right; 
     height: 70px;
@@ -76,12 +77,6 @@ body
 	margin:0px 10px 10px 0px;
 }
 
-#nav, #feature, #footer, #container
-{
-	margin: 1%;
-	padding:10px;
-	color:white;
-}
 
 .indexText 
 {
@@ -102,20 +97,17 @@ body
 	margin: 2px 2px;
 }
 
-/* --- Down Arrow, under read more --- */
-.down
+/* -------------  links ----------*/
+#aboutDownloads 
 {
-	transform: rotate(45deg);
-	-webkit-transform:rotate(45deg);
+	color:white;
 }
-	
-.down a:hover
+
+#textLinks a
 {
-	color:lightgrey;
-	transform: rotate(45deg);
-	-webkit-transform:rotate(45deg);
+	color: purple;
 }
-	
+
 /* ------------------ Footer ------------------ */
 #footer 
 {
@@ -140,6 +132,12 @@ body
 	background-color: cornflowerblue;
 }
 
+.fa:hover
+{
+	color:blue;
+	text-decoration: none;
+}
+
 
 /* ------------------ Images ------------------ */
 #container img
@@ -150,14 +148,6 @@ body
 	border-radius:8px;
 } 
 
-
-#indexDP
-{
-	border-radius:10px;
-	width:250px;
-	margin-left:10px;
-	height:250px;
-}
 
 /* ------------- Read More ----------*/
 .readMore 
@@ -290,6 +280,7 @@ li
 	
 #bubblecontent
 { 
+	text-align: center;
 	margin:0px auto; 
 	transition:opacity 0.3s linear 0s; 
 	font-family:"Times New Roman, Times, serif";
@@ -305,6 +296,7 @@ li
 #bubblecontent > 
 	p
 	{ 
+		text-align: center;
 		font-size:17px; 
 		line-height:1.5em; 
 		padding:20px 50px; 
@@ -358,6 +350,15 @@ label
 /* ------------- Mobile (Screen Sizes) --------------- */
 @media only screen and (max-width: 1000px) 
 {
+	body
+	{
+		padding:10px;
+		width:100%;
+		margin: 0 auto;
+		color:grey;
+		background-color:lightgrey;
+	}
+
     label 
     {
 		margin: 4px 0px 0px 4px;
@@ -391,9 +392,9 @@ label
 
 	}
 
-		  /* mobile screen bubble slideshow  */
-		  #bubblebox
-		  { 
+	/* mobile screen bubble slideshow  */
+	#bubblebox
+	{ 
 			  width:300px; 
 			  height:250px; 
 			  margin:50px auto; 
@@ -412,7 +413,7 @@ label
 			  { 
 				  display:inline-block; 
 				  width:10px; 
-				  height:10px; 
+				  height:10px;
 				  margin:24px 10px 0px 10px; 
 				  background:rgba(0,0,0,.1); 
 				  text-align:center; 
@@ -420,12 +421,13 @@ label
 				  border-radius:100%; 
 				  font-size:17px; 
 				  text-decoration:none; 
-				  transition: background 0.3s linear 0s; 
+				  transition: 0.3s linear 0s; 
 				  cursor:pointer; 
 			  }
 			  
 		  #bubblecontent
 		  { 
+			  text-align: center;
 			  margin:0px auto; 
 			  transition:opacity 0.3s linear 0s; 
 			  font-family:"Times New Roman, Times, serif";
@@ -440,64 +442,104 @@ label
 			  
 		  #bubblecontent > 
 			  p
-			  { 
+			  {
+				  text-align: center; 
 				  font-size:17px; 
 				  line-height:1.5em; 
 				  padding:20px 50px; 
 				  color:#777; 
 			  }
-			  
-   
+
+	/* mobile screen contact form */
+	.input-contact 
+	{ 
+		margin: 10px 10px 10px 10px;
+	}
+
+	.input-contact input 
+	{ 
+		height: 30px;
+		width: 150px;
+		padding: 15px 10px;
+		font-size: 16px;
+		border-radius: 5px;
+		border: 1px solid gray;
+	}
+
+	.input-contact textarea 
+	{
+		height: 100px;
+		width: 300px;
+		padding: 5px 10px;
+		font-size: 16px;
+		border-radius: 5px;
+		border: 1px solid gray;
+	}
+	
+	.btn-submit
+	{ 
+		background: cornflowerblue;
+		border-color:white;
+		color: black;
+		border-radius:5px;
+	}
+
+
+	.btn-submit:hover 
+	{ 
+		background:lightgray;
+		border-color:cornflowerblue; 
+		color: black;
+		cursor:pointer;
+	}
     
 }
 
-
 /* -------------- Sidebar -------------- */
-
 #sidebar 
 {
+	text-decoration: none;
 	Padding-top: 20px;
 	margin-top:20px;
 	font-weight:normal;
+	color: white;
+	text-align: center;
 }
+
 
 
 .panel-default 
 {
 	background:#D9BF8F;
 	background-color:white;
-	font-family:"Times New Roman", Times, serif;
+	font-family:"Times New Roman, Times, serif";
     font-weight: normal;
     font-size: 16px;
 }
-
 
 #sidebar-image .panel-body 
 { 
 	padding:0px;
 	color:#ffffff;
-	font-family:"Times New Roman", Times, serif;
+	font-family:"Times New Roman, Times, serif";
 }
-
 
 *.panel-default p
 {
     text-align: justify;
-    font-family:"Times New Roman", Times, serif;
+    font-family:"Times New Roman, Times, serif";
     font-weight: normal;
     font-size: 13px;
 }
 
 
 /* ------------------- Forms ------------------- */
-
 input, select, textarea  
 {
 	border: solid 1px #D9BF8F;
 	Margin-top:1px;
 	color:black;
 }
-
 
 .error 
 {
@@ -509,68 +551,41 @@ input, select, textarea
 	border: 1px solid #f00;
 }
 
-/* -------------- Sidebar -------------- */
-
-#sidebar 
-{
-	Padding-top: 20px;
-	font-weight:normal;
-}
-
-
-.panel-default 
-{
-	background:#D9BF8F;
-	background-color:silver;
-	font-family:"Times New Roman", Times, serif;
-    font-weight: normal;
-    font-size: 16px;
-}
-
-
-#sidebar-image .panel-body 
-{ 
-	padding:0px;
-	color:#ffffff;
-	font-family:"Times New Roman", Times, serif;
-}
-
-
-*.panel-default p
-{
-    text-align: justify;
-    font-family:"Times New Roman", Times, serif;
-    font-weight: normal;
-    font-size: 13px;
-}
 
 /* -------------- Input Form (login and contact) -------------- */
-
-.input-group {
+.input-group 
+{
   margin: 10px 0px 10px 0px;
 }
 
-.input-login { /* for login form */
+/* for login form */
+.input-login 
+{ 
   margin: 10px 0px 10px 0px;
 }
 
-.input-contact { /* for contact form */
+/* for contact form */
+.input-contact 
+{ 
 	margin: 10px 0px 10px 0px;
-  }
+}
 
-  
-.input-primary { /* for any form of choice */
+/* for any form of choice */  
+.input-primary 
+{ 
 	margin: 10px 0px 10px 0px;
-  }
+}
 
-
-.input-group label {
+.input-group label 
+{
   display: block;
   text-align: center;
   margin: 3px;
 }
 
-.input-login input { /* for login form */
+ /* for login form */
+.input-login input 
+{
   height: 30px;
   width: 200px;
   padding: 5px 10px;
@@ -579,28 +594,30 @@ input, select, textarea
   border: 1px solid gray;
 }
 
-.input-contact input { /* for contact form */
+/* any button of choice */
+.input-primary input 
+{ 
 	height: 30px;
 	width: 400px;
 	padding: 5px 10px;
 	font-size: 16px;
 	border-radius: 5px;
 	border: 1px solid gray;
-  }
+}
 
-  .input-primary input { /* any button of choice */
+/* for contact form */
+.input-contact input 
+{ 
 	height: 30px;
 	width: 400px;
 	padding: 5px 10px;
 	font-size: 16px;
 	border-radius: 5px;
 	border: 1px solid gray;
-  }
+}
 
-
-
-
-.input-contact textarea {
+.input-contact textarea 
+{
   height: 100px;
   width: 400px;
   padding: 5px 10px;
