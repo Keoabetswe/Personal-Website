@@ -39,12 +39,12 @@
 	<br/>
 
 	<!-- main content-->
-	<div id="content">           
+	<div class="row" id="content">           
 		<div id="maincontent">
 		
 		<h2 id="contentHeader">Contact</h2>
 
-		<center><p id="contentBody">Please feel free to contact via the form below or email me at KeoNthite@gmail.com</p></center>
+		<center><p id="contentBody">Get in touch via the form below or email me at <a style="color:white;">KeoNthite@gmail.com</a></p></center>
 
 		<!-- break -->
 		<br/>
@@ -53,15 +53,15 @@
 		<form method="post" action="user_process.php">
 			<center>
 			<div class="input-contact">
-				<input type="text" placeholder="Name" name="name">
+				<input type="text" placeholder="Name" name="name" required="required">
 			</div>
 				  
 			<div class="input-contact">
-				<input type="text" placeholder="Email" name="email">
+				<input type="text" placeholder="Email" name="email" required="required">
 			</div>
 				  	
 			<div class="input-contact">
-			  <textarea cols="3" rows="3" placeholder="Message" name="message"></textarea>
+			  <textarea cols="3" rows="3" placeholder="Message" name="message" required="required"></textarea>
 			</div>
 				
 			<div class="input-contact">
@@ -72,19 +72,12 @@
 		<!-- maincontent -->	
 		</div>
 
-		<!-- footer -->
-		<div id="footer" class="col-lg-12">
-			<small>
-				<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook"></a> 
-				<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram"></a> 
-				<a href="https:linkedin.com/KeoabetsweNthite" class="fa fa-linkedin" title="LinkedIn"></a> 
-				<a href="https:linkedin.com/KeoabetsweNthite" class="fa fa-github" title="Github"></a> 
-				<a href="contact.php" class="fa fa-envelope" title="Email"></a></center>
-			</small>
-		</div>
-
+		<br/><br/><br/>
 	<!-- closes content -->
 	</div>
 
 </body>
 </html>
+<div class="input-contact">
+			  <textarea cols="3" rows="3" placeholder="Message" name="message" required="required"></textarea>
+			</div>
