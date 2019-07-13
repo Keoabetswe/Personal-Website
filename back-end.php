@@ -1,4 +1,31 @@
-﻿
+﻿<?php
+session_start();
+
+// connection string
+$db_host="localhost";	
+$db_username="root";	
+$db_password="";	
+$db_name="personal_website";
+
+$db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
+
+if (isset($_GET['logout'])) 
+{
+	   session_destroy();
+	  unset($_SESSION['username']);
+	  header("location: login.php");
+}
+
+if(isset($_GET["action"]))
+{
+	if($_GET['action'] == "admin_delete")
+	{
+		$id = $_GET['id'];
+		$delete_query = "DELETE FROM projects WHERE project_id = '$id'";
+		$delete = mysqli_query($db_connect, $delete_query);
+	}
+}
+?>
 
 <html>
  <head>
@@ -48,11 +75,10 @@
 	    <input type="checkbox" id="toggle"/>
 	            
 	    <div class="menu">
-		    <a href="index.html">Home</a>
-	        <a href="about.html">About</a>
-   	        <a href="blog.php">Blog</a>
-	        <a href="portfolio.php">Portfolio</a>
-   	        <a href="contact.php">Contact</a>
+		   	 <!-- logged in Admin -->
+			<?php  if (isset($_SESSION['username'])) : ?>
+  			 <a href="login.php?logout='1'" style="color: red; background:grey;">logout</a>
+			 <?php endif ?>
 	    </div>
 	    
 	</div>
@@ -62,35 +88,65 @@
 
 <!-- Place the whole page in a column narrower than the full screen on a large screen-->
 	<div class="container">
- 		
+ 	
+				 
 		<!-- Header -->
 		<div id="top" class="row">
-			
-			 <!--main heading-->
 			<center><h1>Back End</h1></center>
 		</div>
 		
-		<!-- Content row -->
+		<!-- Content -->
 		<div id="content" style="background-color:lightgrey;">            
 			<div id="maincontent" >		
 			
-				<h1 >Projects</h1>
+				<h1>Projects</h1>
 				<table class="table table-bordered table-hover">
 					<tr>
 						<th width="10%">Project Num</th>
 						<th width="10%">Project Type</th>
-						<th width="20%">Project Name</th>
+						<th width="15%">Project Name</th>
+						<th width="10%">Description</th>
 						<th width="6%">Duration</th>
-						<th width="5">Language(s)</th>
+						<th width="10">Language(s)</th>
 						<th width="15%">Contributor(s)</th>		
 						<th width="7%">Image</th>
 													
 						<th width="10%">Action</th>
-
 					</tr>
-								
+
+					<?php
+						$projects_query = "SELECT * FROM projects";
+						$projects_result = mysqli_query($db_connect, $projects_query);
+						
+						if($projects_result->num_rows > 0)
+						{
+							while($row = $projects_result-> fetch_assoc())
+							{?>
+								<tr>
+									<td><?php echo $row['project_id'] ?></td>
+									<td><?php echo $row['project_type'] ?></td>
+									<td><?php echo $row['project_name'] ?></td>
+									<td><?php echo $row['project_desc'] ?></td>																															
+									<td><?php echo $row['project_date'] ?></td>
+									<td><?php echo $row['project_language'] ?></td>
+									<td><?php echo $row['project_contributors'] ?></td>
+									<td><?php echo $row['project_image'] ?></td>
+									
+									<td align="center">
+										<!-- edit button -->
+										<a href="editProject.php?id=<?php echo $row['project_id']?>"><span style="color:green;">Edit</span></a> | 
+										
+										<!-- delete button -->
+										<a href="back-end.php?id=<?php echo $row['project_id'] ?>&action=admin_delete"  
+										onclick="return confirm('Are you sure?')"><span class="text-danger">Delete</span></a> 
+									</td>																		
+								</tr>
+					<?php
+							}	
+						}		
+					?>						
 				</table>
-					<center><input type="submit" class="btn btn-primary submit" name="project-form" value="Create Project"/></center>			
+					<center><a href="createProject.php"><input type="submit" class="btn btn-primary submit" name="project-form" value="Create Project"/></a></center>			
 			</div>			
 		</div>		
 	</div>
