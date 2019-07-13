@@ -1,9 +1,9 @@
 <?php 	
 
 $db_host="localhost";	
-$db_username="keontuzb";	
-$db_password="keontuzb_keo";	
-$db_name="keontuzb_website";
+$db_username="root";	
+$db_password="";	
+$db_name="personal_website";
 
 $db_connect = mysqli_connect($db_host, $db_username, $db_password);	
 
@@ -13,7 +13,6 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password);
 		echo "<h3>Failed to connect to mySQL: </h3>" .mysqli_connect_error();
 		//	echo '<script>alert("Congrats '.$username.' \n You have successfully created an Account:)")</script>';
 		//	echo '<script>window.location="index.php"</script>';
-
 	}
 	else
 	{
