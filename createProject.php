@@ -1,4 +1,53 @@
-﻿<html>
+﻿<?php
+session_start();
+
+$db_host="localhost";	
+$db_username="root";	
+$db_password="";	
+$db_name="personal_website";
+$db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
+
+
+if (isset($_GET['logout'])) 
+{
+	session_destroy();
+  	unset($_SESSION['username']);
+ 	header("location: index.html");
+}
+
+if(isset($_GET["id"]))
+{
+	$query = "SELECT * FROM projects WHERE project_id = ".$_GET['id'];
+	$result = mysqli_query($db_connect, $query);
+	 $editRow = mysqli_fetch_array($result);	//collects item row info
+}
+
+if(isset($_POST['create']))
+{
+	//stores updated values
+	$id = $_POST['id'];
+	$type = $_POST['type'];	
+	$name = $_POST['name'];
+	$desc = $_POST['desc'];		
+	$date = getdate(); //gets current system date
+	$language = $_POST['language'];	
+	$contributors = $_POST['contributors'];	
+	$image = $_POST['image'];	
+	
+	$add_query = "INSERT INTO projects (project_type, project_name, project_desc,project_date,project_language,project_image,project_contributors) VALUES ('$type', '$name', '$desc', '$date', '$language', '$image','$contributors')";
+	$result = mysqli_query($db_connect,$add_query);
+	header("location: back-end.php");
+}
+
+if(isset($_POST['cancel']))
+{
+	//cancels the item and re-directs to admin page
+	header("location: back-end.php");
+}
+
+?>
+
+<html>
  <head>
 	<title>Create Project</title>
 	
@@ -46,13 +95,14 @@
 	    <label for="toggle">&#9776;</label>
 	    <input type="checkbox" id="toggle"/>
 	            
-	    <div class="menu">
-   			<a href="index.html">Home</a>
-	        <a href="about.html">About</a>
-		    <a href="blog.html">Blog</a>
-	        <a href="portfolio.html">Portfolio</a>
-   	        <a href="contact.php">Contact</a>
-	    </div>
+		<div class="menu">
+		   	 <!-- logged in Admin -->
+			<?php  if (isset($_SESSION['username'])) : ?>
+  			 <a href="login.php?logout='1'" style="color: red; background:grey;">logout</a>
+			 <?php endif ?>
+		</div>
+		
+		<!-- break -->
 	    <br/>
 	</div>
 
@@ -78,64 +128,71 @@
 					 <center><table cellpadding="2" cellspacing="2">
 					 
 							  
-					 <div class="projects-types">
-						 <!-- Projects filter option -->
-						 <p style="color:black;">Project Type</p>
-						 <select name="projects-filter-options">
-						 	<option value="all"></option>
-						 	<option value="assignments">Assignment</option>
-						 	<option value="freelance">Freelance</option>
-						 	<option value="personal">Personal</option>			 				 				 	
-						 </select>
-					 </div>
-
-						<tr>
+					 	<tr>
+							<td>Project Type</td>
 							<td>
-								<div class="input-group">
-									<input type="text" name="name" placeholder="Project Name">
-							  	</div>
-
-							</td>
-						</tr>
-						
-							<tr>
-							<td>
-								<div class="input-group">
-									<textarea class="form-control" rows="3" cols="57" placeholder="Project Description" id="message" name="message"></textarea>
-							  	</div>
-
-							</td>
-						</tr>
-						
-						<tr>
-							<td>
-								<div class="input-group">
-									<input type="text" name="Project Language(s)">
+								<div class="input-login">
+									<input type="text" name="type">
 							  	</div>
 							</td>
 						</tr>
 						
 						<tr>
+							<td>Project Name</td>
 							<td>
-								<div class="input-group">
-									<input type="text" name="Project Contributors">
+								<div class="input-login">
+									<input type="text" name="name">
 							  	</div>
+							</td>
+						</tr>
 
+						<tr>
+							<td>Description</td>
+							<td>
+								<div class="input-login">
+									<input type="text" name="desc">
+							  	</div>
 							</td>
 						</tr>
 						
 						<tr>
-						<td><input type="file" id="image" name="item_image" accept="images/*" ><!-- adds an image --></td>
-						</tr>
-						
-						<tr>
+							<td>Language(s)</td>
 							<td>
+								<div class="input-login">
+									<input type="text" name="language">
+							  	</div>
+							</td>
+						</tr>
+
 								
-								<br/><!-- break -->
-				  				<button type="submit" class="btn btn-backend submit" name="create" style="width:70px;">Submit</button>
-				  				<button type="submit" class="btn" name="cancel">Cancel</button>				  				
+						<tr>
+							<td>Contributor(s)</td>
+							<td>
+								<div class="input-login">
+									<input type="text" name="contributors">
+							  	</div>
 							</td>
 						</tr>
+
+						<tr>
+						<tr>
+							<td>Project Image</td>
+							<td>
+								<div class="input-group">
+									<input type="file" id="image" name="image" accept="images/*" ><!-- adds an image -->
+							  	</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td>&nbsp;</td>
+							<td>
+							<div class="input-login">
+								<button type="submit" class="btn btn-backend submit" name="create" style="width:70px;">Submit</button>
+								<button type="submit" class="btn" name="cancel">Cancel</button>							  				
+							</td>
+						</tr>
+					
 					</table></center>
 				</form>	
 
