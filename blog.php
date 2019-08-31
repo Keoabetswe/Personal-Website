@@ -55,10 +55,10 @@
 	<!-- footer -->
 	<div id="footer" class="col-lg-12">
 	   	<small>
-			<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook"></a> 
-			<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram"></a> 
-			<a href="https:linkedin.com/KeoabetsweNthite" class="fa fa-linkedin" title="LinkedIn"></a> 
-			<a href="https:linkedin.com/KeoabetsweNthite" class="fa fa-github" title="Github"></a> 
+			<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook" target="_blank"></a> 
+			<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram" target="_blank"></a> 
+			<a href="https://www.linkedin.com/in/keoabetswe-nthite-a4a6b3ab/" class="fa fa-linkedin" title="LinkedIn" target="_blank"></a> 
+			<a href="https://github.com/Keoabetswe" class="fa fa-github" title="Github" target="_blank"></a> 
 			<a href="contact.php" class="fa fa-envelope" title="Email"></a></center>
 		</small>
 	</div>
