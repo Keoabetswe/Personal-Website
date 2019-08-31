@@ -78,6 +78,3 @@
 
 </body>
 </html>
-<div class="input-contact">
-			  <textarea cols="3" rows="3" placeholder="Message" name="message" required="required"></textarea>
-			</div>
