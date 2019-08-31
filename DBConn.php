@@ -1,5 +1,5 @@
 <?php 	
-$db_host="localhost";	
+$db_host="192.168.110.19";	
 $db_username="keontuzb_keo";	
 $db_password="Mm@mpeta1";	
 $db_name="keontuzb_website";
