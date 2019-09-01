@@ -1,13 +1,14 @@
 ﻿<?php
 session_start();
 
-// connection string
-$db_host="localhost";	
-$db_username="root";	
-$db_password="";	
-$db_name="personal_website";
+// connects to the database
+$db_host="192.168.110.19";	
+$db_username="keontuzb_keo";	
+$db_password="Mm@mpeta1";	
+$db_name="keontuzb_website";
 
-$db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
+$db = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
+
 
 if (isset($_GET['logout'])) 
 {
