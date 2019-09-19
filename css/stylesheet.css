@@ -379,7 +379,7 @@ label
 	.menu a 
 	{
         display: block;
-        z-index:10;
+		z-index:10;
         position:relative;
 		color: white;
 		border-color:2px solid black;	   
@@ -505,8 +505,6 @@ label
 	color: white;
 	text-align: center;
 }
-
-
 
 .panel-default 
 {
