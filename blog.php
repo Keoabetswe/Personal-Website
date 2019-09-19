@@ -51,7 +51,18 @@
 		<center><p id="contentBody">Coming Soon...blogs from Medium</p></center>
 		   
 		<!-- break -->
-		<br><br><br><br><br><br><br><br><br><br><br>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+		<!-- retrieves blogs from medium -->
+		<div id="retainable-rss-embed"
+			data-rss="https://medium.com/feed/@keonthite"
+			data-maxcols="3" 
+			data-layout="grid"
+			data-poststyle="inline"
+			data-readmore="Read More"
+			data-buttonclass="btn btn-primary"
+			data-offset="-100">
+		</div>
 				
 		<!-- closes maincontent -->			
 		</div>
@@ -70,5 +81,7 @@
 	<!-- closes content -->	
 	</div>
 
+	<!-- embeds medium posts -->
+	<script src="https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
 </body>
 </html>
