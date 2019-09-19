@@ -1,10 +1,4 @@
-﻿<?php 
-include('user_process.php');
-
-?> 
-
-
-<html>
+﻿<html>
  <head>
 	<title>Login</title>
 	
@@ -77,7 +71,7 @@ include('user_process.php');
 				<div id="content" style="background-color:lightgrey;">
 				
 				<!-- Login Form -->		
-				 <form method="post" action="user_process.php">
+				<form method="post" action="user_process.php">
 				  	<center>
 					<!-- displays errors -->
 					<?php include('errors.php'); ?>
@@ -93,7 +87,7 @@ include('user_process.php');
 				  	<div class="input-login">
 					  <input type="submit" class="btn btn-login submit" name="login" value="Login"/>
 				  	</div></center>
-				  </form>				
+				</form>				
 			</div>		
 		</div>
 	</div>

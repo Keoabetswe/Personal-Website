@@ -1,7 +1,3 @@
-<?php
-	using('user_process.php');
-?>
-
 <html>
  <head>
 	<title>Thank You</title>
@@ -64,7 +60,7 @@
 	
 	<!-- maincontent row -->		         
 	<div id="maincontent" >		
-		<h2 id="contentHeader" style="color:gray;"></h2>
+		<h2 id="contentHeader" style="color:gray;">Thank you, your message has successfuly been sent.</h2>
 	</div>		
 	
 </body>
