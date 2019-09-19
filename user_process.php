@@ -17,12 +17,15 @@ if (isset($_POST['contact']))
   $message = mysqli_real_escape_string($db, $_POST['message']);
   
   //Sends Email to CPanel
-  //$to = "info@keonthite.co.za"; 
-  //$subject = "Personal Website Enquiry"; 
+  /*$to = "KeoNthite@gmail.com"; 
+  $subject = "Personal Website Enquiry";
+  $body = "Name: " .$name ."\n" 
+          ."Email: " .$email ."\n" 
+          ."Message: " .$message; 
 
-  //$sendEmail = mail($to, $subject, $message);
+  $sendEmail = mail($to, $subject, $body);
   
-  /*if($sendEmail)
+  if($sendEmail)
   {
   	 $response = "Your message was successfully sent :)";
   }
@@ -36,7 +39,8 @@ $contact_form = "INSERT INTO contact(contact_name,contact_email, contact_date, c
 mysqli_query($db, $contact_form);  	
 
 //redirects user to thank you page
-header('location:thank-you.html'); 	
+header('location:thank-you.php'); 	
+
 }
 
 /* --------------------------------------------------------------------------*/
@@ -51,7 +55,7 @@ if (isset($_POST['login']))
   {
       //$password = md5($password);
         //inserts into login tbl
-      $login_query = "SELECT * FROM users WHERE username='$user' AND password = '$pass'";
+      $login_query = "SELECT * FROM users WHERE username = '$user' AND password = '$pass'";
       $results = mysqli_query($db, $login_query);
       
       if (mysqli_num_rows($results) == 1) 
@@ -89,7 +93,8 @@ $portfolio = "INSERT INTO projects(project_type,project_name,project_desc, proje
 mysqli_query($db, $portfolio);  	
 
 //redirects user to # page
-header('location:back-end.html'); 	
+header('location:back-end.php'); 	
 }
 
 ?>
+s
