@@ -48,10 +48,9 @@
 		<div id="maincontent">           
 				
 		<h2 id="contentHeader">Blog</h2>
-		<center><p id="contentBody">Coming Soon...blogs from Medium</p></center>
 		   
 		<!-- break -->
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/>
 
 		<!-- retrieves blogs from medium -->
 		<div id="retainable-rss-embed"
