@@ -138,6 +138,23 @@ body
 	text-decoration: none;
 }
 
+/* index footer */
+#index-footer 
+{
+	text-decoration:none;
+	color:cornflowerblue;
+	text-align: center;
+	display: inline;
+	font-size:30px;	
+}
+
+#index-footer:hover 
+{
+	text-decoration: none;
+	color:grey;
+}
+
+
 
 /* ------------------ Images ------------------ */
 #container img
@@ -317,7 +334,7 @@ li
     color:white;
     line-height: 30px;
     background:cornflowerblue;
-   	padding:10px;
+   	padding:13px;
     margin:0 10px;
 }
 
