@@ -48,7 +48,7 @@
 		
 		<h2 id="contentHeader">Contact</h2>
 
-		<center><p id="contentBody">Get in touch via the form below or email me at <a style="color:white;">KeoNthite@gmail.com</a></p></center>
+		<center><p id="contentBody">Have a question or want to work together?</p></center>
 
 		<!-- break -->
 		<br/>
@@ -59,7 +59,7 @@
 			<div class="input-contact">
 				<input type="text" placeholder="Name" name="name" required="required">
 			</div>
-				  
+			  
 			<div class="input-contact">
 				<input type="text" placeholder="Email" name="email" required="required">
 			</div>
