@@ -5,8 +5,8 @@ var ba, bi=0, intrvl;
 // bca - Bubble Content Array. Put your content here.
 var bca = [
     '<h2>Skills</h2><p>placeholder 1</p>',
-	'<h2>Qualification</h2><p>placeholder 2</p>',
-	'<h2>Experience</h2><p>placeholder 3</p>',
+	'<h2>Qualification</h2><p>placeholder</p>',
+	'<h2>Experience</h2><p>placeholder</p>',
 	
 ];
 
