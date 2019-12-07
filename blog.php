@@ -73,6 +73,7 @@
 			<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram" target="_blank"></a> 
 			<a href="https://www.linkedin.com/in/keoabetswe-nthite-a4a6b3ab/" class="fa fa-linkedin" title="LinkedIn" target="_blank"></a> 
 			<a href="https://github.com/Keoabetswe" class="fa fa-github" title="Github" target="_blank"></a> 
+			<a href="https://medium.com/@keonthite" class="fa fa-medium" title="Medium" target="_blank"></a> 
 			<a href="contact.php" class="fa fa-envelope" title="Email"></a></center>
 		</small>
 	</div>
