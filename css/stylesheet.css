@@ -138,21 +138,23 @@ body
 	text-decoration: none;
 }
 
-/* index footer */
-#index-footer 
+/* index page footer icons */
+#index-footer .fa
 {
-	text-decoration:none;
+	background-color: lightgrey;
 	color:cornflowerblue;
+	text-decoration:none;
 	text-align: center;
 	display: inline;
 	font-size:30px;	
 }
 
-#index-footer:hover 
+#index-footer .fa:hover
 {
+	color:blue;
 	text-decoration: none;
-	color:grey;
 }
+
 
 
 
