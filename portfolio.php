@@ -1,6 +1,15 @@
 ﻿<?php
+session_start();
 
+// connects to the database
+$db_host="192.168.110.19";	
+$db_username="keontuzb_keo";	
+$db_password="Mm@mpeta1";	
+$db_name="keontuzb_website";
+
+$db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en" >
@@ -12,6 +21,7 @@
     
   <!-- css -->
 	<link href="css/stylesheet.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/c12.css" />
   
   	<!--Calling JavaScript slideshow -->
 	<script type="text/javascript" src="js/slider.js"></script>
@@ -44,32 +54,59 @@
 	<!-- main content-->
 	<div id="content">           
 		<div id="maincontent">
-			
+	
 			
 		<h2 id="contentHeader">Portfolio</h2>
-		<center><p id="contentBody">Coming Soon...Github link below</p></center>
 			
-		<!-- break -->
-		<br><br><br><br><br><br><br><br><br><br><br>
+		<?php 
+				$items_query = "SELECT * FROM projects order by project_id ASC";
+				$items_result = mysqli_query($db_connect, $items_query);
+				
+				if(mysqli_num_rows ($items_result) > 0)
+				{
+					while($row = mysqli_fetch_array($items_result))
+					{
+								
+				?>
+				
+				<div class="repo-project">
+					<form  method="post" action="portfolio.php?action=add&id=<?php echo $row["project_id"];?>">
+						<div style="border:1px solid #333; background-color:lightgrey; border-radius:5px; padding:5px; width:300px;">
+							<img src="images/<?php echo $row["project_image"]; ?>" class="img-responsive" height="150px" width="300px"/><br />
+	
+							<h4 class="text-danger"><?php echo $row["project_name"]; ?></h4>
+							<h4 class="text-info"><?php echo $row["project_desc"];?></h4>
+	
+							<center><a href="<?php echo $row["github_link"];?>" ><input type="submit" name="" style="margin-top:5px;" class="btn btn-success" value="Github View"/></a>
+							<input type="submit" name="" style="margin-top:5px;" class="btn btn-success" value="Live View" src="<?php echo $row["live_link"];?>" /></center>
+						</div>
+				</form>
+				
+				<br/><!-- break -->
+				
 
-		  	
-	<!-- closes maincontent -->			
-	</div>
+				</div>	
+				<?php
+					}
+				}
+				?>
 
-	<!-- footer -->
-	<div id="footer" class="col-lg-12">
-		<small>
-			<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook" target="_blank"></a> 
-			<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram" target="_blank"></a> 
-			<a href="https://www.linkedin.com/in/keoabetswe-nthite-a4a6b3ab/" class="fa fa-linkedin" title="LinkedIn" target="_blank"></a> 
-			<a href="https://github.com/Keoabetswe" class="fa fa-github" title="Github" target="_blank"></a> 
-			<a href="https://medium.com/@keonthite" class="fa fa-medium" title="Medium" target="_blank"></a> 
-			<a href="contact.php" class="fa fa-envelope" title="Email"></a></center>
-		</small>
-	</div>
+		<!-- closes maincontent -->			
+		</div>
+
+		<!-- footer -->
+		<div id="footer" class="col-lg-12">
+			<small>
+				<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook" target="_blank"></a> 
+				<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram" target="_blank"></a> 
+				<a href="https://www.linkedin.com/in/keoabetswe-nthite-a4a6b3ab/" class="fa fa-linkedin" title="LinkedIn" target="_blank"></a> 
+				<a href="https://github.com/Keoabetswe" class="fa fa-github" title="Github" target="_blank"></a> 
+				<a href="https://medium.com/@keonthite" class="fa fa-medium" title="Medium" target="_blank"></a> 
+				<a href="contact.php" class="fa fa-envelope" title="Email"></a></center>
+			</small>
+		</div>
 
 	<!-- closes content -->
 	</div>
-
 </body>
 </html>
