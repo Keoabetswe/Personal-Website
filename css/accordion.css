@@ -1,0 +1,34 @@
+/**********  ACCORDION **********/
+.accordion {
+  background-color: darkgray;
+  color: white;
+  margin: 0;
+  padding: 0;
+  }
+
+.accordion li {
+  padding: 0;
+  list-style-type: none;}
+
+.accordion-control {
+  background-color: #303030;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.5em 0.5em 0.7em;
+  margin: 0;
+  border-top: 1px solid cornflowerblue;}
+
+.accordion-panel {
+  display: none;
+  color: cornflowerblue;
+}
+
+.accordion-panel p {
+  margin: 20px;
+  color: black;
+}
+
+.accordion-panel img {
+  display: block;
+  clear: left;}
