@@ -1,54 +1,26 @@
 ﻿/*Slider CSS*/
 
-body
-{
-	margin:0;
-	padding:0;
-	background:#313131;
-	
+.slide-viewer {
+	position: relative;
+	overflow: hidden;
+	height: 300px;
 }
 
-.slider
-{
-	width:800px;
-	height:400px;
-	background:url('images/namib-wellness.png');
-	margin:100px auto;
-	animation: slide 20s infinite;
+.slide-group {
+	width: 50%;
+	height: 100%;
+	position: relative;
 }
 
-@keyframes slide
-{
-	25%
-	{
-		background:url('\images\namib-banner-small.png"');
-	}  
-	
-	50%
-	{
-		background:url('images\namib-booking.png"');
-	}
-	
-	75%
-	{
-		background:url('images\namib-landscape.png');
-	}
-	
-	
-	100%
-	{
-		background:url('images\namib-rates.png');
-	}
+.slider {
+	width: 50%;
+	height: 100%;
+	display: none;
+	position: absolute;
 }
 
+.slide:first-child {
+	display: block;
+}
 
-
-
-
-
-
-
-
-
-
-
+/* ------------- Mobile (Screen Sizes) --------------- */

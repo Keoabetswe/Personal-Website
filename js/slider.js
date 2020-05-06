@@ -1,61 +1,82 @@
-﻿// This simple function returns object reference for elements by ID
-function _(x){return document.getElementById(x);}
-// Variables for bubble array, bubble index, and the setInterval() variable
-var ba, bi=0, intrvl;
-// bca - Bubble Content Array. Put your content here.
-var bca = [
-    '<h2>Skills</h2><p>placeholder 1</p>',
-	'<h2>Qualification</h2><p>placeholder</p>',
-	'<h2>Experience</h2><p>placeholder</p>',
-	
-];
-
-// This function is triggered by the bubbleSlide() function below
-function bubbles(bi)
+﻿$('.slider').each(function()
 {
-	// Fade-out the content
-	_("bubblecontent").style.opacity = 0;
+	var $this = $(this),
+	var $group = $this.find('.slide-group'),
+	var $slides = $this.find('.slide'),
+	var buttonArray = [],
+	var currentIndex = 0,
+	var timeout;
 
-	// Loop over the bubbles and change all of their background color
-	for(var i=0; i < ba.length; i++)
+	//call the move function
+	function move(newIndex) //creates the slide from the old to new one
 	{
-		ba[i].style.background = "rgba(0,0,0,.1)";
+		var animateLeft, slideLeft;
+
+		advance(); //when the slide moves, call advance() again
+
+		//if current slide is showing or a slide is animating, then do nothing
+		if($group.is(':animated') || currentIndex === newIndex)
+		{
+			return;
+		}
+
+		buttonArray[currentIndex].removeClass('active');
+		buttonArray[newIndex].addClass('active');
+
+		if(newIndex > currentIndex)
+		{
+			slideLeft = '100%';
+			animateLeft = '-100%';
+		}
+		else
+		{
+			slideLeft = '-100%';
+			animateLeft = '100%';
+		}
+
+		$slides.eq(newIndex).css( {left: slideLeft, display: 'block'} );
+		$group.animate( {left: animateLeft} , function() 
+		{
+			$slides.eq(currentIndex).css( {display: 'none'} );
+			$slides.eq(newIndex).CSS( {left: 0} );
+			$group.css( {left: 0} );
+			currentIndex = newIndex;
+		});
 	}
-	// Change the target bubble background to be darker than the rest
-	ba[bi].style.background = "#999";
 
-	// Stall the bubble and content changing for just 300ms
-	setTimeout(function()
+	function advance() 
 	{
-		// Change the content
-		_("bubblecontent").innerHTML = bca[bi];
-	
-		// Fade-in the content
-		_("bubblecontent").style.opacity = 1;
-	}, 300);	
-}
+		clearTimeout(timeout);
 
-// This function is set to run every 5 seconds(5000ms)
-function bubbleSlide()
-{
-	bi++; // Increment the bubble index number
-	
-	// If bubble index number is equal to the amount of total bubbles
-	if(bi == ba.length)
-	{
-		bi = 0; // Reset the bubble index to 0 so it loops back at the beginning
+		//timer to run an anonymous function every 4 seconds
+		timeout = setTimeout(function() 
+		{
+			if(currentIndex < ($slides.length - 1))
+			{
+				move(currentIndex + 1);		
+			}
+			else
+			{
+				move(0);
+			}
+		}, 4000);
 	}
-	// Make the bubbles() function above run
-	bubbles(bi);
-}
 
-// Start the application up when document is ready
-window.addEventListener("load", function()
-{
-	// Get the bubbles array
-	ba = _("bubbles").children;
+	$.each($slides, function(index)
+	{
+		//creates button element for the button
+		var $button = $('<button type="button" class="slide-btn">&bull;</button');
+		
+		if(index === currentIndex) //if index is the current item
+		{
+			$button.addClass('active'); //adds the active class
+		}
+		$button.on('click', function()
+		{
+			move(index);
+		}).appendTo('.slide-buttons');
+		buttonArray.push($button);
+	});
 
-	// Set the interval timing for the slideshow speed
-	intrvl = setInterval(bubbleSlide, 5000);
+	advance();
 });
-
