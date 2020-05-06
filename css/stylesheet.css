@@ -6,6 +6,11 @@
 	text-align:center;
 }
 
+#position-title h1
+{
+	text-align: center;
+}
+
 #sliderContent 
 {
 	text-align: center;
@@ -44,6 +49,11 @@
     line-height: 70px;
 }
 
+menu.active {
+	background-color: #00cccc;
+	color: #fff;
+	cursor: pointer;}
+
 /* ------------------ Content ------------------ */
 
 body
@@ -77,7 +87,6 @@ body
 	margin:0px 10px 10px 0px;
 }
 
-
 .indexText 
 {
 	margin-top:30px;
@@ -88,6 +97,8 @@ body
 	font-size:20px;
 	text-align:center;
 }
+
+
 
 /* ------------- bullets (about page) ----------*/
 #bullets li
@@ -155,9 +166,6 @@ body
 	text-decoration: none;
 }
 
-
-
-
 /* ------------------ Images ------------------ */
 #container img
 {
@@ -166,7 +174,6 @@ body
 	position:absolute;
 	border-radius:8px;
 } 
-
 
 /* ------------- Read More ----------*/
 .readMore 
@@ -190,7 +197,6 @@ i
 	cursor:pointer;
 	margin-bottom:10%;
 }
-
 
 /* ------------------ Buttons ------------------ */
 
@@ -254,7 +260,6 @@ li
 	border-radius:5px;
 }
 
-
 .btn-submit:hover 
 { 
 	background:lightgray;
@@ -262,7 +267,6 @@ li
 	color: black;
 	cursor:pointer;
 }
-
 
 /* ------------------ Slideshow ------------------ */
 #bubblebox
@@ -366,6 +370,12 @@ label
     display: none;
 }
 
+/* ------------- Repo Projects --------------- */
+*.repo-project h4
+{
+	text-align: center;
+}
+
 /* ------------- Mobile (Screen Sizes) --------------- */
 @media only screen and (max-width: 1000px) 
 {
@@ -403,7 +413,6 @@ label
 		color: white;
 		border-color:2px solid black;	   
     }
-
     
    #toggle:checked + .menu 
     {
@@ -503,7 +512,6 @@ label
 		border-radius:5px;
 	}
 
-
 	.btn-submit:hover 
 	{ 
 		background:lightgray;
@@ -548,7 +556,6 @@ label
     font-weight: normal;
     font-size: 13px;
 }
-
 
 /* ------------------- Forms ------------------- */
 input, select, textarea  
