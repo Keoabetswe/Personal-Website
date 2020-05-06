@@ -1,20 +1,17 @@
 ﻿<!DOCTYPE html>
 <html lang="en" >
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index</title>
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
     
   	<!-- css -->
 	<link href="css/stylesheet.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/accordion.css"/>
   
-  	<!--Calling JavaScript slideshow -->
-	<script type="text/javascript" src="js/slider.js"></script>
-
   	<!-- Add icon library -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -31,41 +28,63 @@
 	        <a href="portfolio.php">Portfolio</a>
    	        <a href="contact.php">Contact</a>
 	    </div>
-	    
 	</div>
-
-	<!-- break -->
-	<br/>
 	
-	<div id="bubblebox">
-		<div id="bubblecontent" style="margin-top: 50px;">
-			<h3 id="sliderContent" style="margin-top: 50px;">Software Developer with a passion for technology and high quality software.</h3>
-		</div>
+	<center><h1 id="position-title">Software Developer</h1></center>
+
+	<!-- breaks-->
+	<br/><br/><br/><br/>
+
+	<section class="page">
+		<ul class="accordion">
+			<li>
+				<button class="accordion-control">Background</button>
+				<div class="accordion-panel">
+					<p>Software developer with a passion for programming, possessing skills in web and android apps.</p>
+					<p>Feel free to contact me for any enquiries, work opportunities, or collaborations.</p>
+				</div>
+			</li>
+		
+			<li>
+				<button class="accordion-control">Skills</button>
+				<div class="accordion-panel">
+					<p>Java</p>
+					<p>Android Development</p>
+					<p>HTML</p>
+					<p>CSS</p>
+					<p>PHP</p>
+					<p>SQL</p>
+				</div>
+			</li>
 			
-		<div id="bubbles">
-			<div onclick="bubbles(0); clearInterval(intrvl);" style="background:#999;"></div>
-			<div onclick="bubbles(1); clearInterval(intrvl);"></div>
-			<div onclick="bubbles(2); clearInterval(intrvl);"></div>
-		</div>
+			<li>
+				<button class="accordion-control">Qualification</button>
+				<div class="accordion-panel">
+					<p>Diploma in I.T (Software Development) 2016-2018</p>
+					<p>BTech in I.T (Software Development) 2019-2020</p>
+				</div>
+			</li>
+	
+		</ul>
+    </section>
+		  
+	<!-- break -->
+	<br/><br/>
+
+	<!-- footer -->
+	<div id="index-footer" class="col-lg-12">
+		<small>
+			<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook" target="_blank"></a> 
+			<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram" target="_blank"></a> 
+			<a href="https://www.linkedin.com/in/keoabetswe-nthite-a4a6b3ab/" class="fa fa-linkedin" title="LinkedIn" target="_blank"></a> 
+			<a href="https://github.com/Keoabetswe" class="fa fa-github" title="Github" target="_blank"></a>
+			<a href="https://medium.com/@keonthite" class="fa fa-medium" title="Medium" target="_blank"></a>  
+			<a href="contact.php" class="fa fa-envelope" title="Email"></a></center>
+		</small>
 	</div>
 
-	<!-- break -->
-	<br>
-			
-
-		
-		<!-- footer -->
-		<div id="index-footer" class="col-lg-12">
-			<small>
-				<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook" target="_blank"></a> 
-				<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram" target="_blank"></a> 
-				<a href="https://www.linkedin.com/in/keoabetswe-nthite-a4a6b3ab/" class="fa fa-linkedin" title="LinkedIn" target="_blank"></a> 
-				<a href="https://github.com/Keoabetswe" class="fa fa-github" title="Github" target="_blank"></a>
-				<a href="https://medium.com/@keonthite" class="fa fa-medium" title="Medium" target="_blank"></a>  
-				<a href="contact.php" class="fa fa-envelope" title="Email"></a></center>
-			</small>
-		</div>
-
+	<script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/accordion.js"></script>
 
 </body>
 </html>
