@@ -73,9 +73,6 @@
 				<!-- Login Form -->		
 				<form method="post" action="user_process.php">
 				  	<center>
-					<!-- displays errors -->
-					<?php include('errors.php'); ?>
-					
 				  	<div class="input-login">
 				  		<input type="text" placeholder="Username" name="username" required="required">   
 				  	</div>
