@@ -2,12 +2,12 @@
 session_start();
 
 // connects to the database
-$db_host="192.168.110.19";	
+$db_host="";	
 $db_username="keontuzb_keo";	
-$db_password="Mm@mpeta1";	
+$db_password="";	
 $db_name="keontuzb_website";
 
-$db = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
+$db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
 
 
 if (isset($_GET['logout'])) 
@@ -78,7 +78,7 @@ if(isset($_GET["action"]))
 	    <div class="menu">
 		   	 <!-- logged in Admin -->
 			<?php  if (isset($_SESSION['username'])) : ?>
-  			 <a href="login.php?logout='1'" style="color: red; background:grey;">logout</a>
+  			 <a href="login.php?logout='1'" style="color: red; background:blue;">logout</a>
 			 <?php endif ?>
 	    </div>
 	    
@@ -103,13 +103,14 @@ if(isset($_GET["action"]))
 				<h1>Projects</h1>
 				<table class="table table-bordered table-hover">
 					<tr>
-						<th width="10%">Project Num</th>
+						<th width="5%">Project Num</th>
 						<th width="10%">Project Type</th>
-						<th width="15%">Project Name</th>
+						<th width="10%">Project Name</th>
 						<th width="10%">Description</th>
-						<th width="6%">Duration</th>
+						<th width="6%">Created</th>
 						<th width="10">Language(s)</th>
-						<th width="15%">Contributor(s)</th>		
+						<th width="5%">GitHub</th>		
+						<th width="7%">Live</th>
 						<th width="7%">Image</th>
 													
 						<th width="10%">Action</th>
@@ -130,7 +131,8 @@ if(isset($_GET["action"]))
 									<td><?php echo $row['project_desc'] ?></td>																															
 									<td><?php echo $row['project_date'] ?></td>
 									<td><?php echo $row['project_language'] ?></td>
-									<td><?php echo $row['project_contributors'] ?></td>
+									<td><?php echo $row['github_link'] ?></td>
+									<td><?php echo $row['live_link'] ?></td>
 									<td><?php echo $row['project_image'] ?></td>
 									
 									<td align="center">

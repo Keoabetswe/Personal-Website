@@ -1,10 +1,9 @@
 ﻿<?php
 session_start();
-
-$db_host="localhost";	
-$db_username="root";	
+$db_host="";	
+$db_username="keontuzb_keo";	
 $db_password="";	
-$db_name="personal_website";
+$db_name="keontuzb_website";
 $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
 
 
@@ -22,28 +21,6 @@ if(isset($_GET["id"]))
 	 $editRow = mysqli_fetch_array($result);	//collects item row info
 }
 
-if(isset($_POST['create']))
-{
-	//stores updated values
-	$id = $_POST['id'];
-	$type = $_POST['type'];	
-	$name = $_POST['name'];
-	$desc = $_POST['desc'];		
-	$date = getdate(); //gets current system date
-	$language = $_POST['language'];	
-	$contributors = $_POST['contributors'];	
-	$image = $_POST['image'];	
-	
-	$add_query = "INSERT INTO projects (project_type, project_name, project_desc,project_date,project_language,project_image,project_contributors) VALUES ('$type', '$name', '$desc', '$date', '$language', '$image','$contributors')";
-	$result = mysqli_query($db_connect,$add_query);
-	header("location: back-end.php");
-}
-
-if(isset($_POST['cancel']))
-{
-	//cancels the item and re-directs to admin page
-	header("location: back-end.php");
-}
 
 ?>
 
@@ -98,7 +75,7 @@ if(isset($_POST['cancel']))
 		<div class="menu">
 		   	 <!-- logged in Admin -->
 			<?php  if (isset($_SESSION['username'])) : ?>
-  			 <a href="login.php?logout='1'" style="color: red; background:grey;">logout</a>
+  			 <a href="login.php?logout='1'" style="color: red; background:blue;">logout</a>
 			 <?php endif ?>
 		</div>
 		
@@ -125,14 +102,13 @@ if(isset($_POST['cancel']))
 			
 				<!-- Create Project Form -->		
 				 <form method="post">
-					 <center><table cellpadding="2" cellspacing="2">
-					 
+					 <center><table cellpadding="2" cellspacing="2">				 
 							  
 					 	<tr>
 							<td>Project Type</td>
 							<td>
 								<div class="input-login">
-									<input type="text" name="type">
+									<input type="text" name="project_type">
 							  	</div>
 							</td>
 						</tr>
@@ -141,7 +117,7 @@ if(isset($_POST['cancel']))
 							<td>Project Name</td>
 							<td>
 								<div class="input-login">
-									<input type="text" name="name">
+									<input type="text" name="project_name">
 							  	</div>
 							</td>
 						</tr>
@@ -150,26 +126,35 @@ if(isset($_POST['cancel']))
 							<td>Description</td>
 							<td>
 								<div class="input-login">
-									<input type="text" name="desc">
+									<input type="text" name="project_desc">
 							  	</div>
 							</td>
 						</tr>
-						
+
 						<tr>
 							<td>Language(s)</td>
 							<td>
 								<div class="input-login">
-									<input type="text" name="language">
+									<input type="text" name="project_language">
 							  	</div>
 							</td>
 						</tr>
 
 								
 						<tr>
-							<td>Contributor(s)</td>
+							<td>Github Link</td>
 							<td>
 								<div class="input-login">
-									<input type="text" name="contributors">
+									<input type="text" name="project_github_link">
+							  	</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Live Link</td>
+							<td>
+								<div class="input-login">
+									<input type="text" name="project_live_link">
 							  	</div>
 							</td>
 						</tr>
@@ -179,7 +164,7 @@ if(isset($_POST['cancel']))
 							<td>Project Image</td>
 							<td>
 								<div class="input-group">
-									<input type="file" id="image" name="image" accept="images/*" ><!-- adds an image -->
+									<input type="file" id="image" name="project_image" accept="images/*" ><!-- adds an image -->
 							  	</div>
 							</td>
 						</tr>
@@ -188,8 +173,8 @@ if(isset($_POST['cancel']))
 							<td>&nbsp;</td>
 							<td>
 							<div class="input-login">
-								<button type="submit" class="btn btn-backend submit" name="create" style="width:70px;">Submit</button>
-								<button type="submit" class="btn" name="cancel">Cancel</button>							  				
+								<button type="submit" class="btn btn-backend submit" name="btnCreate" style="width:70px;">Submit</button>
+								<button type="submit" class="btn" name="btnCancel">Cancel</button>							  				
 							</td>
 						</tr>
 					

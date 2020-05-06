@@ -2,10 +2,10 @@
 session_start();
 
 // connection string
-$db_host="localhost";	
-$db_username="root";	
+$db_host="";	
+$db_username="keontuzb_keo";	
 $db_password="";	
-$db_name="personal_website";
+$db_name="keontuzb_website";
 
 $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 
@@ -16,20 +16,23 @@ if(isset($_GET["id"]))
 	$editProject = mysqli_fetch_array($result);	//collects item row info
 }
 
-if(isset($_POST['update']))
+if(isset($_POST['btnUpdate']))
 {
 	//stores updated values
-	$id = $_POST['id'];
-	$desc = $_POST['type'];	
-	$cost_price = $_POST['name'];
-	$quantity = $_POST['description'];		
-	$sell_price = $_POST['date'];	
-	$image = $_POST['language'];		
-	$image = $_POST['image'];
-	$image = $_POST['contributors'];				
+	$id = $_POST['project_id'];
+	$type = $_POST['project_type'];	
+	$name = $_POST['project_name'];
+	$desc = $_POST['project_desc'];		
+	$date = $_POST['project_date'];	
+	$lang = $_POST['project_language'];		
+	$image = $_POST['project_image'];
+	$github = $_POST['project_github_link'];				
+	$live = $_POST['project_live_link'];				
 	
-	$update_query = "UPDATE projects set Description = '$desc', CostPrice ='$cost_price', Quantity ='$quantity', SellPrice ='$sell_price', Image ='$image' WHERE ItemID = '$id'";
+	$update_query = "UPDATE projects set project_type = '$type',project_name = '$name',project_desc = '$desc', project_date = '$date',project_language = '$lang',project_image = '$image',github_link = '$github',live_link = '$live' WHERE ItemID = '$id'";
 	$result = mysqli_query($db_connect,$update_query);
+
+	echo '<script>alert("Information Updated!")</script>';
 	header("location: back-end.php");
 }
 
@@ -117,16 +120,15 @@ if(isset($_POST['cancel']))
 
 			<div id="content" style="background-color:lightgrey;">
 				<!-- Login Form -->		
-				 <form method="post" action="user_process.php">
+				 <form method="post" action="editProject.php">
 				 <center><table cellpadding="2" cellspacing="2">
 							
 					    <tr>
 							<td>Project Num</td>
 							<td>
 								<div class="input-login">
-									<input type="hidden" name="id" value="<?php echo $editProject['project_id'];?>">
+									<input type="text" name="project_id" value="<?php echo $editProject['project_id'];?>">
 							  	</div>
-
 							</td>
 						</tr>
 						
@@ -134,9 +136,8 @@ if(isset($_POST['cancel']))
 							<td>Project Type</td>
 							<td>
 								<div class="input-login">
-									<input type="text" name="type" value="<?php echo $editProject['project_type'];?>">
+									<input type="text" name="project_type" value="<?php echo $editProject['project_type'];?>">
 							  	</div>
-
 							</td>
 						</tr>
 						
@@ -144,7 +145,7 @@ if(isset($_POST['cancel']))
 							<td>Project Name</td>
 							<td>
 								<div class="input-login">
-									<input type="text" name="name" value="<?php echo $editProject['project_name'];?>">
+									<input type="text" name="project_name" value="<?php echo $editProject['project_name'];?>">
 							  	</div>
 
 							</td>
@@ -154,7 +155,7 @@ if(isset($_POST['cancel']))
 							<td>Description</td>
 							<td>
 								<div class="input-login">
-									<input type="text" name="description" value="<?php echo $editProject['project_desc'];?>">
+									<input type="text" name="project_desc" value="<?php echo $editProject['project_desc'];?>">
 							  	</div>
 
 							</td>
@@ -164,7 +165,7 @@ if(isset($_POST['cancel']))
 							<td>Project Date</td>
 							<td>
 								<div class="input-login">
-									<input type="text" name="date" value="<?php echo $editProject['project_date'];?>">
+									<input type="text" name="project_date" value="<?php echo $editProject['project_date'];?>">
 							  	</div>
 
 							</td>
@@ -174,7 +175,7 @@ if(isset($_POST['cancel']))
 							<td>Language(s)</td>
 							<td>
 								<div class="input-login">
-									<input type="text" name="language" value="<?php echo $editProject['project_language'];?>">
+									<input type="text" name="project_language" value="<?php echo $editProject['project_language'];?>">
 							  	</div>
 
 							</td>
@@ -182,12 +183,20 @@ if(isset($_POST['cancel']))
 
 								
 						<tr>
-							<td>Contributor(s)</td>
+							<td>Github</td>
 							<td>
 								<div class="input-login">
-									<input type="text" name="contributors" value="<?php echo $editProject['project_contributors'];?>">
+									<input type="text" name="project_github_link" value="<?php echo $editProject['github_link'];?>">
 							  	</div>
+							</td>
+						</tr>
 
+						<tr>
+							<td>Live</td>
+							<td>
+								<div class="input-login">
+									<input type="text" name="project_live_link" value="<?php echo $editProject['live_link'];?>">
+							  	</div>
 							</td>
 						</tr>
 
@@ -195,7 +204,7 @@ if(isset($_POST['cancel']))
 							<td>Project Image</td>
 							<td>
 								<div class="input-group">
-									<input type="file" id="image" name="image" accept="images/*" ><!-- adds an image -->
+									<input type="file" id="image" name="project_image" accept="images/*" ><!-- adds an image -->
 							  	</div>
 							</td>
 						</tr>
@@ -204,7 +213,7 @@ if(isset($_POST['cancel']))
 							<td>&nbsp;</td>
 							<td>
 							<div class="input-login">
-								<button type="submit" class="btn btn-backend submit" name="update" style="width:70px;">Submit</button>
+								<button type="submit" class="btn btn-backend submit" name="btnUpdate" style="width:70px;">Update</button>
 								<button type="submit" class="btn" name="cancel">Cancel</button>							  				
 							</td>
 						</tr>
