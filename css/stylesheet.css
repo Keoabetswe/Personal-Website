@@ -1,4 +1,4 @@
-﻿/* ------------------ Header ------------------ */
+﻿/* ------------------ Headers ------------------ */
 *.h1
 {
 	font-family:"Times New Roman, Times, serif";
@@ -6,20 +6,19 @@
 	text-align:center;
 }
 
-#position-title h1
+#dev-title
 {
 	text-align: center;
 }
 
-#sliderContent 
+#tech-stack
 {
 	text-align: center;
-	font-size:25px;
-	color:black;
-	font-family:"Times New Roman, Times, serif";
+	padding-bottom:20px;
 }
 
-#nameHeader
+
+#website-name
 {
 	font-size:25px;
 	margin-top: 5px;
@@ -28,7 +27,7 @@
 	font-family:"Times New Roman, Times, serif";
 }
 
-#contentHeader 
+#body-title 
 {
 	text-align: center;
 }
@@ -61,13 +60,20 @@ body
 	padding:10px;
 	width:90%;
 	margin: 0 auto;
-	color:grey;
 	background-color:lightgrey;
 }	
 	
+
 #contentBody p
 {
 	text-align: center;
+}
+
+#page 
+{
+    margin: 0 auto 0 auto;
+    position: relative;
+    text-align: center;
 }
 
 #content 
@@ -101,7 +107,7 @@ body
 
 
 /* ------------- bullets (about page) ----------*/
-#bullets li
+#tech-stack-list li
 {
 	display: list-item;
 	text-decoration:none;
@@ -109,12 +115,12 @@ body
 }
 
 /* -------------  links ----------*/
-#aboutDownloads 
+#pdfLink 
 {
-	color:white;
+	color: purple;
 }
 
-#textLinks a
+#coderDojoLink
 {
 	color: purple;
 }
@@ -175,43 +181,7 @@ body
 	border-radius:8px;
 } 
 
-/* ------------- Read More ----------*/
-.readMore 
-{
-	color: black;
-	text-decoration:none;
-}
-
-.readMore:hover
-{
-	color:black;
-	text-decoration:none;
-}
-
-i
-{
-	border:solid black;
-	border-width: 0 3px 3px 0;
-	display:inline-block;
-	padding:5px;	
-	cursor:pointer;
-	margin-bottom:10%;
-}
-
 /* ------------------ Buttons ------------------ */
-
-h3.read-more
-{
-	border-width:2px;	
-	border-style:groove;
-	width:15%;
-	text-align:center;
-}
-
-h3.read-more:hover
-{
-	color:gray;
-}
 
 li
 {
@@ -251,7 +221,6 @@ li
 	cursor:pointer;
 }
 
-
 .btn-submit
 { 
 	background: cornflowerblue;
@@ -267,64 +236,6 @@ li
 	color: black;
 	cursor:pointer;
 }
-
-/* ------------------ Slideshow ------------------ */
-#bubblebox
-{ 
-	width:650px; 
-	height:250px; 
-	margin:50px auto; 
-	border:1px solid #AAA; 
-}
-
-#bubbles
-{ 
-	width:auto; 
-	margin:0px auto; 
-	text-align:center; 
-}
-
-#bubbles > 
-	div
-	{ 
-		display:inline-block; 
-		width:10px; 
-		height:10px; 
-		margin:24px 10px 0px 10px; 
-		background:rgba(0,0,0,.1); 
-		text-align:center; 
-		border:2px solid #999; 
-		border-radius:100%; 
-		font-size:17px; 
-		text-decoration:none; 
-		transition: background 0.3s linear 0s; 
-		cursor:pointer; 
-	}
-	
-#bubblecontent
-{ 
-	text-align: center;
-	margin:0px auto; 
-	transition:opacity 0.3s linear 0s; 
-	font-family:"Times New Roman, Times, serif";
-}
-
-#bubblecontent > 
-	h2
-	{ 
-		text-align:center; 
-		color:cornflowerblue;
-	}
-	
-#bubblecontent > 
-	p
-	{ 
-		text-align: center;
-		font-size:17px; 
-		line-height:1.5em; 
-		padding:20px 50px; 
-		color:#777; 
-	}
 	
 /* ------------- Menu --------------- */
 
@@ -420,63 +331,6 @@ label
 
 	}
 
-	/* mobile screen bubble slideshow  */
-	#bubblebox
-	{ 
-			  width:300px; 
-			  height:250px; 
-			  margin:50px auto; 
-			  border:1px solid #AAA; 
-		  }
-		  
-		  #bubbles
-		  { 
-			  width:auto; 
-			  margin:0px auto; 
-			  text-align:center; 
-		  }
-		  
-		  #bubbles > 
-			  div
-			  { 
-				  display:inline-block; 
-				  width:10px; 
-				  height:10px;
-				  margin:24px 10px 0px 10px; 
-				  background:rgba(0,0,0,.1); 
-				  text-align:center; 
-				  border:2px solid #999; 
-				  border-radius:100%; 
-				  font-size:17px; 
-				  text-decoration:none; 
-				  transition: 0.3s linear 0s; 
-				  cursor:pointer; 
-			  }
-			  
-		  #bubblecontent
-		  { 
-			  text-align: center;
-			  margin:0px auto; 
-			  transition:opacity 0.3s linear 0s; 
-			  font-family:"Times New Roman, Times, serif";
-		  }
-		  
-		  #bubblecontent > 
-			  h2
-			  { 
-				  text-align:center; 
-				  color:cornflowerblue;
-			  }
-			  
-		  #bubblecontent > 
-			  p
-			  {
-				  text-align: center; 
-				  font-size:17px; 
-				  line-height:1.5em; 
-				  padding:20px 50px; 
-				  color:#777; 
-			  }
 
 	/* mobile screen contact form */
 	.input-contact 
@@ -650,4 +504,54 @@ input, select, textarea
   border: 1px solid gray;
 }
 
+
+/* Small screen:mobile */
+@media only screen and (max-width: 500px) 
+{
+    body 
+    {
+        background-color: lightgrey;
+    }
+    #page 
+    {
+      max-width: 480px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 767px) 
+{
+    #page 
+    {
+		max-width: 720px;
+    	margin: 20px auto 20px auto;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) 
+{
+    #page 
+    {
+      max-width: 720px;
+      margin: 20px auto 20px auto;
+    }
+}
+
+/* Larger screens act like a demo for the app */
+@media only screen and (min-width: 960px) 
+{
+    #page 
+    {
+      max-width: 480px;
+      margin: 10px auto 10px auto;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) 
+{ 
+    h1
+    {
+      /*background-image: url(images/shopping-cart.png);*/
+      background-size: 72px 72px;
+    }
+}
 
