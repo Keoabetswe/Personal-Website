@@ -115,10 +115,10 @@ if(isset($_POST['cancel']))
 		
 		<br/>
 		<!-- Content row -->
-		<div class="row" id="content" style="background-color:lightgrey;">            
+		<div class="row" id="container" style="background-color:lightgrey;">            
 			<div id="maincontent" >		
 
-			<div id="content" style="background-color:lightgrey;">
+			<div id="container" style="background-color:lightgrey;">
 				<!-- Login Form -->		
 				 <form method="post" action="editProject.php">
 				 <center><table cellpadding="2" cellspacing="2">

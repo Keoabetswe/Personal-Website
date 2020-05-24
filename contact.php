@@ -43,7 +43,7 @@
 	<br/>
 
 	<!-- main content-->
-	<div id="content">           
+	<div id="container">           
 		<div id="maincontent">
 		
 		<h2 id="body-title">Contact</h2>

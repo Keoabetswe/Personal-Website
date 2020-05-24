@@ -97,7 +97,7 @@ if(isset($_GET["action"]))
 		</div>
 		
 		<!-- Content -->
-		<div id="content" style="background-color:lightgrey;">            
+		<div id="container" style="background-color:lightgrey;">            
 			<div id="maincontent" >		
 			
 				<h1>Projects</h1>

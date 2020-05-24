@@ -95,10 +95,10 @@ if(isset($_GET["id"]))
 		
 		<br/>
 		<!-- Content row -->
-		<div class="row" id="content" style="background-color:lightgrey;">            
+		<div class="row" id="container" style="background-color:lightgrey;">            
 			<div id="maincontent" >		
 
-			<div id="content" style="background-color:lightgrey;">
+			<div id="container" style="background-color:lightgrey;">
 			
 				<!-- Create Project Form -->		
 				 <form method="post">

@@ -68,7 +68,7 @@
 		<!-- Content row -->
 		<div class="row" action="user_process" style="background-color:lightgrey;">            
 			<div id="maincontent" >		
-				<div id="content" style="background-color:lightgrey;">
+				<div id="container" style="background-color:lightgrey;">
 				
 				<!-- Login Form -->		
 				<form method="post" action="user_process.php">
