@@ -48,10 +48,12 @@
     line-height: 70px;
 }
 
-menu.active {
+menu.active 
+{
 	background-color: #00cccc;
 	color: #fff;
-	cursor: pointer;}
+	cursor: pointer;
+}
 
 /* ------------------ Content ------------------ */
 
@@ -60,7 +62,9 @@ body
 	padding:10px;
 	width:90%;
 	margin: 0 auto;
-	background-color:lightgrey;
+	background: rgb(34,94,195);
+	background: linear-gradient(0deg, rgba(34,94,195,1) 2%, rgba(211,211,211,1) 62%);
+	background-repeat: no-repeat;
 }	
 	
 
@@ -76,7 +80,7 @@ body
     text-align: center;
 }
 
-#content 
+#container
 {
 	border-radius:10px; 
 	Margin-bottom:20px;
@@ -98,7 +102,7 @@ body
 	margin-top:30px;
 }
 
-.contentText
+.bodyText
 {
 	font-size:20px;
 	text-align:center;
@@ -173,7 +177,7 @@ body
 }
 
 /* ------------------ Images ------------------ */
-#container img
+#container-img
 {
 	width:100%;
 	height:100%;
@@ -510,11 +514,13 @@ input, select, textarea
 {
     body 
     {
-        background-color: lightgrey;
+        background: rgb(34,94,195);
+		background: linear-gradient(0deg, rgba(34,94,195,1) 2%, rgba(161,160,157,1) 62%);
+		background-repeat: no-repeat;
     }
     #page 
     {
-      max-width: 480px;
+      	max-width: 480px;		
     }
 }
 
