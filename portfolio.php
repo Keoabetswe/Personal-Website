@@ -10,26 +10,20 @@ $db_name="keontuzb_website";
 $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-    
-  <!-- css -->
+  	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+		
+  	<!-- css -->
 	<link href="css/stylesheet.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/c12.css" />
   
-  	<!--Calling JavaScript slideshow -->
-	<script type="text/javascript" src="js/slider.js"></script>
-
-  
-  <!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -52,7 +46,7 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 	<br/>
 
 	<!-- main content-->
-	<div id="content">           
+	<div id="container">           
 		<div id="maincontent">
 			<h2 id="body-title">Portfolio</h2>
 			
