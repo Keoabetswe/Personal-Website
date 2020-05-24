@@ -41,7 +41,7 @@
 <body>
 	<!-- nav bar -->
 	<div class="nav">
-	    <p id="NameHeader" style="font-size:25px;">Keoabetswe <strong>Nthite</strong></p>
+	    <p id="website-name" style="font-size:25px;">Keoabetswe <strong>Nthite</strong></p>
 
 	    <label for="toggle">&#9776;</label>
 	    <input type="checkbox" id="toggle"/>

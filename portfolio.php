@@ -34,7 +34,7 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 
 <body>
 	<div class="nav">
-	    <p id="nameHeader">Keoabetswe <strong>Nthite</strong></p>
+	    <p id="website-name">Keoabetswe <strong>Nthite</strong></p>
 
 	    <label for="toggle">&#9776;</label>
 	    <input type="checkbox" id="toggle"/>
@@ -54,7 +54,7 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 	<!-- main content-->
 	<div id="content">           
 		<div id="maincontent">
-			<h2 id="contentHeader">Portfolio</h2>
+			<h2 id="body-title">Portfolio</h2>
 			
 		<?php 
 				$items_query = "SELECT * FROM projects order by project_id ASC";
