@@ -47,7 +47,6 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 
 	<!-- main content-->
 	<div id="container">           
-		<div id="maincontent">
 			<h2 id="body-title">Portfolio</h2>
 			
 		<?php 
@@ -60,30 +59,25 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 					{						
 				?>
 				
-				<div class="col-md-4">
-					<div class="repo-project">
-						<div style="border:1px solid #333; background-color:lightgrey; border-radius:5px; padding:5px; width:300px;">
-							<img src="images/<?php echo $row["project_image"]; ?>" class="img-responsive" height="150px" width="300px"/><br />
-		
-							<h4 class="text-danger"><?php echo $row["project_name"]; ?></h4>
-							<h4 class="text-info"><?php echo $row["project_desc"];?></h4>
-							<h4>Tech: </h4><h4 class="text-info"><?php echo $row["project_language"];?></h4>
-		
-							<center>
-								<a href="<?php echo $row["github_link"];?>" target="_blank"><input type="submit" name="" style="margin-top:5px;" class="btn btn-success" value="Github View"/></a>
-								<a href="<?php echo $row["live_link"];?>" target="_blank"><input type="submit" name="" style="margin-top:5px;" class="btn btn-success" value="Live View"/></a>
-							</center>
-						</div>		
-					</div>	
-				<br/><!-- break -->
+				<div id="repo-project">
+					<!-- <div class="img" src="images/<?php echo $row["project_image"]; ?>"></div> -->
+					<div class="img" style="background-image:
+						   url('images/close')">
+					</div>
+					<h4 id="project-title"><?php echo $row["project_name"]; ?></h4>
+					<h4 id="project-description"><?php echo $row["project_desc"];?></h4>
+									
+					<center>
+						<a href="<?php echo $row["github_link"];?>" target="_blank"><input type="submit" name="" style="margin-top:5px;" class="btn btn-success" value="Github View"/></a>
+						<a href="<?php echo $row["live_link"];?>" target="_blank"><input type="submit" name="" style="margin-top:5px;" class="btn btn-success" value="Live View"/></a>
+					</center>
 				</div>	
 
 				<?php
 					}
 				}
 				?>
-
-	<!-- closes maincontent -->			
+	<!-- closes container -->			
 	</div>
 
 	<!-- footer -->
