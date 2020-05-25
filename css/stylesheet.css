@@ -150,7 +150,7 @@ body
 	text-decoration: none;
 	color:white;
 	Margin:0px 5px 0px 0px;
-	background-color: cornflowerblue;
+	
 }
 
 .fa:hover
@@ -162,9 +162,8 @@ body
 /* index page footer icons */
 #index-footer .fa
 {
-	background-color: lightgrey;
-	color:cornflowerblue;
 	text-decoration:none;
+	color:white;
 	text-align: center;
 	display: inline;
 	font-size:30px;	
