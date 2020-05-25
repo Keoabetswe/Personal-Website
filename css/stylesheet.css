@@ -71,7 +71,7 @@ body
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
-	
+
 }	
 	
 
@@ -292,9 +292,35 @@ label
 }
 
 /* ------------- Repo Projects --------------- */
-*.repo-project h4
+#project-title 
 {
 	text-align: center;
+	color:royalblue;
+}
+
+#project-description 
+{
+	text-align: center;
+	color:green;
+}
+
+.img
+ {
+	width: 100px;
+	height: 100px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+ }
+
+#repo-project
+{
+	border:3px solid gray; 
+	background-color:lightgray; 
+	border-radius:5px; 
+	padding:5px;
+	width:300px;
+	margin:10px;
 }
 
 /* ------------- Mobile (Screen Sizes) --------------- */
@@ -340,7 +366,6 @@ label
         display: block;
 
 	}
-
 
 	/* mobile screen contact form */
 	.input-contact 
