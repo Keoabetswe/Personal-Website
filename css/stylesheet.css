@@ -8,13 +8,16 @@
 
 #dev-title
 {
+	margin-top: 50px;
 	text-align: center;
+	color: black;
 }
 
 #tech-stack
 {
 	text-align: center;
-	padding-bottom:20px;
+	margin-top: 30px;
+	padding-bottom:20px;	
 }
 
 
@@ -65,6 +68,10 @@ body
 	background: rgb(34,94,195);
 	background: linear-gradient(0deg, rgba(34,94,195,1) 2%, rgba(211,211,211,1) 62%);
 	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	
 }	
 	
 
