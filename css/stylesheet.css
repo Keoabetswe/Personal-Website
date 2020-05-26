@@ -30,7 +30,7 @@
 	font-family:"Times New Roman, Times, serif";
 }
 
-#body-title 
+#body-title, #sub-body-title
 {
 	text-align: center;
 }
@@ -308,6 +308,7 @@ label
  {
 	width: 150px;
 	height: 150px;
+	border-radius:5px; 
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -316,20 +317,23 @@ label
 	margin-right: auto;
  }
 
-#repo-project
+.repo-project
 {
 	border:3px solid gray; 
 	background-color:lightgray; 
 	border-radius:5px; 
 	padding:5px;
-	width:300px;
+	width:250px;
 	margin:10px;
 	display:inline-block;
-	margin-left: auto;
-	margin-right: auto;
-
 }
 
+.container
+{
+	
+	
+	padding: 20px;
+}
 /* ------------- Mobile (Screen Sizes) --------------- */
 @media only screen and (max-width: 1000px) 
 {
