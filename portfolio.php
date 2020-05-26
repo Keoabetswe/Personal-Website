@@ -2,9 +2,9 @@
 session_start();
 
 // connects to the database
-$db_host="";	
+$db_host="192.168.110.19";	
 $db_username="keontuzb_keo";	
-$db_password="";	
+$db_password="Mm@mpeta1";	
 $db_name="keontuzb_website";
 
 $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
@@ -46,10 +46,10 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 	<br/>
 
 	<!-- main content-->
-	<div id="container">           
+	<div class="container">           
 			<h2 id="body-title">Portfolio</h2>
 			
-		<?php 
+			<?php 
 				$items_query = "SELECT * FROM projects order by project_id ASC";
 				$items_result = mysqli_query($db_connect, $items_query);
 				
@@ -59,17 +59,15 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 					{						
 				?>
 				
-				<div id="repo-project">
-					<!-- <div class="img" src="images/<?php echo $row["project_image"]; ?>"></div> -->
-					<div class="img" style="background-image:
-						   url('images/close')">
-					</div>
+				<div class="repo-project">
+					<div class="img" style="background-image:url('images/<?php echo $row["project_image"]; ?>')"></div> 
+				
 					<h4 id="project-title"><?php echo $row["project_name"]; ?></h4>
 					<h4 id="project-description"><?php echo $row["project_desc"];?></h4>
 									
 					<center>
-						<a href="<?php echo $row["github_link"];?>" target="_blank"><input type="submit" name="" style="margin-top:5px;" class="btn btn-success" value="Github View"/></a>
-						<a href="<?php echo $row["live_link"];?>" target="_blank"><input type="submit" name="" style="margin-top:5px;" class="btn btn-success" value="Live View"/></a>
+						<a href="<?php echo $row["github_link"];?>" target="_blank"><input type="submit" style="margin-top:5px;" class="btn btn-success" value="Github"/></a>
+						<a href="<?php echo $row["live_link"];?>" target="_blank"><input type="submit" style="margin-top:5px;" class="btn btn-success" value="Live"/></a>
 					</center>
 				</div>	
 
@@ -77,10 +75,9 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 					}
 				}
 				?>
-	<!-- closes container -->			
+		
 	</div>
 
-	<!-- footer -->
 	<div id="footer" class="col-lg-12">
 		<small>
 			<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook" target="_blank"></a> 
@@ -92,7 +89,5 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 		</small>
 	</div>
 
-	<!-- closes content -->
-	</div>
 </body>
 </html>
