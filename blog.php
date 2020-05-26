@@ -44,9 +44,7 @@
 	<br/>
 
 	<!-- main content-->
-	<div id="container">           
-		<div id="maincontent">           
-				
+	<div id="container">            
 		<h2 id="body-title">Blog</h2>
 		   
 		<!-- break -->
@@ -61,10 +59,7 @@
 			data-readmore="Read More"
 			data-buttonclass="btn btn-primary"
 			data-offset="-100">
-		</div>
-				
-		<!-- closes maincontent -->			
-		</div>
+		</div>	
 
 		<!-- footer -->
 		<div id="footer" class="col-lg-12">
@@ -77,9 +72,8 @@
 				<a href="contact.php" class="fa fa-envelope" title="Email"></a></center>
 			</small>
 		</div>
+	</div>	
 
-	<!-- closes content -->	
-	</div>
 
 	<!-- embeds medium posts -->
 	<script src="https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
