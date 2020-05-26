@@ -116,6 +116,11 @@ body
 	text-align:center;
 }
 
+#accordion-text
+{
+	color:black;
+	font-size: 15px;
+}
 
 
 /* ------------- bullets (about page) ----------*/
@@ -127,14 +132,15 @@ body
 }
 
 /* -------------  links ----------*/
-#pdfLink 
+#coderdojo-link
 {
-	color: purple;
+	color: black;
 }
 
-#coderDojoLink
+#attachment-link
 {
-	color: purple;
+	font-size:18px;
+	color: black;
 }
 
 /* ------------------ Footer ------------------ */
