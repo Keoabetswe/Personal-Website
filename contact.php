@@ -42,13 +42,11 @@
 	<!--  break -->
 	<br/>
 
-	<!-- main content-->
-	<div id="container">           
-		<div id="maincontent">
+	<div class="container">          
 		
 		<h2 id="body-title">Contact</h2>
 
-		<center><p id="contentBody">Have a question or want to work together?</p></center>
+		<p id="sub-body-title">Have a question or want to work together?</p>
 
 		<!-- break -->
 		<br/>
@@ -72,12 +70,7 @@
 				<input type="submit" class="btn btn-contact submit" name="contact" value="Submit"/>
 			</center>
 		</form>				
-					
-		<!-- maincontent -->	
-		</div>
 
-		<br/><br/><br/>
-	<!-- closes content -->
 	</div>
 
 </body>
