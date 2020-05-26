@@ -35,6 +35,7 @@
 	text-align: center;
 }
 
+
 /* ------------------ Nav ------------------ */
 #nav
 {
@@ -342,8 +343,12 @@ label
 		padding:10px;
 		width:100%;
 		margin: 0 auto;
-		color:grey;
-		background-color:lightgrey;
+		background: rgb(34,94,195);
+		background: linear-gradient(0deg, rgba(34,94,195,1) 2%, rgba(211,211,211,1) 62%);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
 	}
 
     label 
@@ -556,9 +561,13 @@ input, select, textarea
 {
     body 
     {
-        background: rgb(34,94,195);
-		background: linear-gradient(0deg, rgba(34,94,195,1) 2%, rgba(161,160,157,1) 62%);
+		margin: 0 auto;
+		background: rgb(34,94,195);
+		background: linear-gradient(0deg, rgba(34,94,195,1) 2%, rgba(211,211,211,1) 62%);
 		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
     }
     #page 
     {
