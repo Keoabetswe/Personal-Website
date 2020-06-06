@@ -78,15 +78,14 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 		
 	</div>
 
-	<div id="footer" class="col-lg-12">
-		<small>
-			<center><a href="https:facebook.com/KeoabetsweNthite" class="fa fa-facebook" title="Facebook" target="_blank"></a> 
+	<div id="footer">
+		<center>
 			<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram" target="_blank"></a> 
 			<a href="https://www.linkedin.com/in/keoabetswe-nthite-a4a6b3ab/" class="fa fa-linkedin" title="LinkedIn" target="_blank"></a> 
 			<a href="https://github.com/Keoabetswe" class="fa fa-github" title="Github" target="_blank"></a> 
 			<a href="https://medium.com/@keonthite" class="fa fa-medium" title="Medium" target="_blank"></a> 
-			<a href="contact.php" class="fa fa-envelope" title="Email"></a></center>
-		</small>
+			<a href="contact.php" class="fa fa-envelope" title="Email"></a>
+		</center>
 	</div>
 
 </body>
