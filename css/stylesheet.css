@@ -72,10 +72,8 @@ body
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
-
 }	
 	
-
 #contentBody p
 {
 	text-align: center;
@@ -101,7 +99,8 @@ body
 	overflow:auto;
 }
 
-#content .pull-left {
+#content .pull-left 
+{
 	margin:0px 10px 10px 0px;
 }
 
@@ -390,29 +389,32 @@ label
 	}
 
 	/* mobile screen contact form */
-	.input-contact 
+	.input-primary input 
 	{ 
-		margin: 10px 10px 10px 10px;
+		height: 30px;
+		width: 350px;
+		padding: 5px 10px;
+		font-size: 16px;
+		border-radius: 5px;
+		border: 1px solid gray;
 	}
 
 	.input-contact input 
 	{ 
 		height: 30px;
-		width: 150px;
-		padding: 15px 10px;
+		width: 350px;
 		font-size: 16px;
 		border-radius: 5px;
 		border: 1px solid gray;
 	}
-
+	
 	.input-contact textarea 
 	{
-		height: 100px;
-		width: 300px;
-		padding: 5px 10px;
-		font-size: 16px;
-		border-radius: 5px;
-		border: 1px solid gray;
+	  height: 100px;
+	  width: 350px;
+	  font-size: 16px;
+	  border-radius: 5px;
+	  border: 1px solid gray;
 	}
 	
 	.btn-submit
@@ -565,7 +567,7 @@ input, select, textarea
 /* Small screen:mobile */
 @media only screen and (max-width: 500px) 
 {
-    body 
+    body
     {
 		margin: 0 auto;
 		background: rgb(34,94,195);
@@ -575,10 +577,28 @@ input, select, textarea
 		background-attachment: fixed;
 		background-size: cover;
     }
-    #page 
+    #page
     {
       	max-width: 480px;		
-    }
+	}
+	
+	.input-contact input 
+	{ 
+		height: 30px;
+		width: 350px;
+		font-size: 16px;
+		border-radius: 5px;
+		border: 1px solid gray;
+	}
+	
+	.input-contact textarea 
+	{
+	  height: 100px;
+	  width: 350px;
+	  font-size: 16px;
+	  border-radius: 5px;
+	  border: 1px solid gray;
+	}
 }
 
 @media only screen and (min-width: 501px) and (max-width: 767px) 
