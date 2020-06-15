@@ -513,6 +513,12 @@ input, select, textarea
 	margin: 10px 0px 10px 0px;
 }
 
+#input-attachment 
+{
+	width:50px;
+}
+
+
 .input-group label 
 {
   display: block;
