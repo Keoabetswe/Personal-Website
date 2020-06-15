@@ -5,6 +5,7 @@ $db_username="keontuzb_keo";
 $db_password="";	
 $db_name="keontuzb_website";
 
+
 $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
 
 //Contact Form
@@ -95,5 +96,31 @@ if(isset($_POST['btnCreate']))
 
 /* -------------------------------------------------------------------------*/
 //Update Project (Back-end)
+if(isset($_POST['btnEdit']))
+{
+	//stores updated values
+	$id = $_POST['project_id'];
+	$type = $_POST['project_type'];	
+	$name = $_POST['project_name'];
+	$desc = $_POST['project_desc'];		
+	$date = $_POST['project_date'];	
+	$lang = $_POST['project_language'];		
+	$image = $_POST['project_image'];
+	$github = $_POST['project_github_link'];				
+	$live = $_POST['project_live_link'];				
+	
+	$update_query = "UPDATE projects set project_type = '$type',project_name = '$name',project_desc = '$desc', project_date = '$date',project_language = '$lang',project_image = '$image',github_link = '$github',live_link = '$live' WHERE ItemID = '$id'";
+	$result = mysqli_query($db_connect,$update_query);
+
+	echo '<script>alert("Information Updated!")</script>';
+	header("location: back-end.php");
+}
+
+if(isset($_POST['btnEditCancel']))
+{
+	//re-direct to admin page
+	header("location: back-end.php");
+}
+
 
 ?>
