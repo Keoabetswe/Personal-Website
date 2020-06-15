@@ -66,8 +66,8 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 					<h4 id="project-description"><?php echo $row["project_desc"];?></h4>
 									
 					
-					<a href="<?php echo $row["github_link"];?>" target="_blank"><input type="submit" style="margin-top:5px;" class="btn btn-success" value="Github"/></a>
-					<a href="<?php echo $row["live_link"];?>" target="_blank"><input type="submit" style="margin-top:5px;" class="btn btn-success" value="Live"/></a>
+						<a href="<?php echo $row["github_link"];?>" target="_blank"><input type="submit" style="margin-top:5px;" class="btn btn-success" value="Github"/></a>
+						<a href="<?php echo $row["live_link"];?>" target="_blank"><input type="submit" style="margin-top:5px;" class="btn btn-success" value="Live"/></a>
 					
 				</div>	
 
@@ -80,7 +80,6 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 
 	<div id="footer">
 		<center>
-			<a href="https:instagram.com/keo_q" class="fa fa-instagram" title="Instagram" target="_blank"></a> 
 			<a href="https://www.linkedin.com/in/keoabetswe-nthite-a4a6b3ab/" class="fa fa-linkedin" title="LinkedIn" target="_blank"></a> 
 			<a href="https://github.com/Keoabetswe" class="fa fa-github" title="Github" target="_blank"></a> 
 			<a href="https://medium.com/@keonthite" class="fa fa-medium" title="Medium" target="_blank"></a> 
