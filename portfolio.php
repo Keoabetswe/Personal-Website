@@ -49,7 +49,7 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 	<div class="container">           
 			<h2 id="body-title">Portfolio</h2>
 			
-			<?php 
+			<center><?php 
 				$items_query = "SELECT * FROM projects order by project_id ASC";
 				$items_result = mysqli_query($db_connect, $items_query);
 				
@@ -65,16 +65,16 @@ $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 					<h4 id="project-title"><?php echo $row["project_name"]; ?></h4>
 					<h4 id="project-description"><?php echo $row["project_desc"];?></h4>
 									
-					<center>
-						<a href="<?php echo $row["github_link"];?>" target="_blank"><input type="submit" style="margin-top:5px;" class="btn btn-success" value="Github"/></a>
-						<a href="<?php echo $row["live_link"];?>" target="_blank"><input type="submit" style="margin-top:5px;" class="btn btn-success" value="Live"/></a>
-					</center>
+					
+					<a href="<?php echo $row["github_link"];?>" target="_blank"><input type="submit" style="margin-top:5px;" class="btn btn-success" value="Github"/></a>
+					<a href="<?php echo $row["live_link"];?>" target="_blank"><input type="submit" style="margin-top:5px;" class="btn btn-success" value="Live"/></a>
+					
 				</div>	
 
 				<?php
 					}
 				}
-				?>
+				?></center>
 		
 	</div>
 
