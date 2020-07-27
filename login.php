@@ -1,10 +1,17 @@
-﻿<html>
+﻿<?php
+session_start();
+
+
+?>
+
+<html>
  <head>
 	<title>Login</title>
 	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-    
+	<link rel="icon" href="images/code.ico">	
+
   	<!-- css -->
 	<link href="css/stylesheet.css" rel="stylesheet">
   
@@ -42,11 +49,11 @@
 					</div>
 					
 					<div class="input-login">
-						<input type="password" placeholder="Password" name="password" required="required">
-					</div>
+						<input type="password" placeholder="Password" name="pass" required="required">
+					</div> 
 						
 					<div class="input-login">
-					<input type="submit" class="btn btn-form submit" name="login" value="Login"/>
+						<input type="submit" class="btn btn-form submit" name="btnLogin" value="Login"/>
 					</div>
 				</center>
 			</form>					

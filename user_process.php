@@ -1,8 +1,8 @@
 <?php
 // connects to the database
-$db_host="";	
+$db_host="192.168.110.19";	
 $db_username="keontuzb_keo";	
-$db_password="";	
+$db_password="Mm@mpeta1";	
 $db_name="keontuzb_website";
 
 
@@ -46,17 +46,17 @@ header('location:thank-you.php');
 
 /* --------------------------------------------------------------------------*/
 //Login Form (Back-End)
-if (isset($_POST['login'])) 
+if (isset($_POST['btnLogin'])) 
 {
   // receives all input values from the upcoming classes form
   $user = mysqli_real_escape_string($db_connect, $_POST['username']);
-  $pass = mysqli_real_escape_string($db_connect, $_POST['password']);
+  $pass = mysqli_real_escape_string($db_connect, $_POST['pass']);
 
   if (count($errors) == 0) 
   {
       //$password = md5($password);
         //inserts into login tbl
-      $login_query = "SELECT * FROM users WHERE username = '$user' AND password = '$pass'";
+      $login_query = "SELECT * FROM users WHERE username = '$user' AND pass = '$pass'";
       $results = mysqli_query($db_connect, $login_query);
       
       if (mysqli_num_rows($results) == 1) 
