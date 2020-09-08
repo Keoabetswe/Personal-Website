@@ -58,7 +58,6 @@ CREATE TABLE IF NOT EXISTS `contact` (
 --
 -- Table structure for table `projects`
 --
-
 DROP TABLE IF EXISTS `projects`;
 CREATE TABLE IF NOT EXISTS `projects` (
   `project_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -78,8 +77,13 @@ CREATE TABLE IF NOT EXISTS `projects` (
 --
 
 INSERT INTO `projects` (`project_id`, `project_type`, `project_name`, `project_desc`, `project_date`, `project_language`, `project_image`, `github_link`, `live_link`) VALUES
-(1, 'Web app', 'Personal Website', 'website displaying skills, projects and blog', '2019-12-03', 'HTML, CSS, PHP, MySQL & JavaScript', 'p1.jpg', 'GitHub.com/Keoabetswe/Personal-Website', 'https://www.keonthite.co.za');
+(1, 'Web app', 'Personal Website', 'website displaying skills, projects and blog', '2019-12-03', 'HTML, CSS, PHP, MySQL & JavaScript', 'web.jpg', 'GitHub.com/Keoabetswe/Personal-Website', 'https://www.keonthite.co.za'),
+(2, 'Web app', 'Shopping Cart', 'Users add items to cart and checkout', '2019-12-03', 'HTML, CSS, PHP, MySQL & JavaScript', 'cart.png', 'GitHub.com/Keoabetswe/Shopping-Cart', 'https://keo-shopping-cart.herokuapp.com'),
+(3, 'Web app', 'Pomodoro Timer', 'A time management tool that uses a timer to break down work into 25 minute intervals.', '2019-12-03', 'HTML, CSS, PHP, MySQL & JavaScript', 'pomodoro-timer.png', 'GitHub.com/Keoabetswe/PomodoroTimer', 'keoabetswe.github.io/pomodorotimer');
 
+
+
+select * from projects;
 -- --------------------------------------------------------
 
 --
