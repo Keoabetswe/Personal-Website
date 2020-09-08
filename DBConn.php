@@ -1,8 +1,8 @@
 <?php 	
-$db_host="";	
-$db_username="keontuzb_keo";	
-$db_password="";	
-$db_name="keontuzb_website";
+$db_host="us-cdbr-east-02.cleardb.com";	
+$db_username="bd1f066e6f1964";	
+$db_password="108a612f";	
+$db_name="heroku_ad3b847ae807a1b";
 
 $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
 
