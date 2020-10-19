@@ -24,7 +24,7 @@
 	            
 	    <div class="menu">
 		    <a href="index.php">Home</a>
-			<a href="about.html">About</a>
+			<a href="about.php">About</a>
 			<a href="documents/K Nthite CV.pdf" target="_blank">CV</a>
    	        <a href="blog.php">Blog</a>
 	        <a href="portfolio.php">Portfolio</a>
