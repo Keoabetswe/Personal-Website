@@ -11,7 +11,7 @@ if (isset($_GET['logout']))
 {
 	session_destroy();
   	unset($_SESSION['username']);
- 	header("location: index.html");
+ 	header("location: index.php");
 }
 
 if(isset($_GET["id"]))
