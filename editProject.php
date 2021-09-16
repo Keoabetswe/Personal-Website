@@ -3,9 +3,9 @@ session_start();
 
 // connection string
 $db_host="";	
-$db_username="keontuzb_keo";	
+$db_username="";	
 $db_password="";	
-$db_name="keontuzb_website";
+$db_name="";
 
 $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 

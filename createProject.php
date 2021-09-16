@@ -1,9 +1,9 @@
 ﻿<?php
 session_start();
-$db_host="192.168.110.19";	
-$db_username="keontuzb_keo";	
-$db_password="Mm@mpeta1";	
-$db_name="keontuzb_website";
+$db_host="";	
+$db_username="";	
+$db_password="";	
+$db_name="";
 $db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);	
 
 
@@ -20,8 +20,6 @@ if(isset($_GET["id"]))
 	$result = mysqli_query($db_connect, $query);
 	 $editRow = mysqli_fetch_array($result);	//collects item row info
 }
-
-
 ?>
 
 <html>
