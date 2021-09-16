@@ -68,6 +68,6 @@
 	</div>	
 
 	<!-- embeds medium posts -->
-	<script src="https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
+	<script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
 </body>
 </html>
