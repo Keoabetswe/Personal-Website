@@ -59,7 +59,7 @@
 		<!-- footer -->
 		<div id="footer" class="col-lg-12">
 			<center>
-				<a href="https://www.linkedin.com/in/keoabetswe-nthite-a4a6b3ab/" class="fa fa-linkedin" title="LinkedIn" target="_blank"></a> 
+				<a href="https://www.linkedin.com/in/keoabetswe-nthite" class="fa fa-linkedin" title="LinkedIn" target="_blank"></a> 
 				<a href="https://github.com/Keoabetswe" class="fa fa-github" title="Github" target="_blank"></a> 
 				<a href="https://medium.com/@keonthite" class="fa fa-medium" title="Medium" target="_blank"></a> 
 				<a href="contact.php" class="fa fa-envelope" title="Email"></a>
