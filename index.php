@@ -25,7 +25,7 @@
 	    <div class="menu">
 		    <a href="index.php">Home</a>
 			<a href="about.php">About</a>
-			<a href="documents/K Nthite CV.pdf" target="_blank">CV</a>
+			<a href="documents/K. NTHITE CV.pdf" target="_blank">CV</a>
    	        <a href="blog.php">Blog</a>
 	        <a href="portfolio.php">Portfolio</a>
    	        <a href="contact.php">Contact</a>
@@ -59,8 +59,6 @@
 					<p><a id="attachment-link" href="documents/K Nthite CV.docx" target="_blank">Word</a></p>
 				</div>
 			</li>
-		
-	 
 		</ul>
     </section>
 		  
