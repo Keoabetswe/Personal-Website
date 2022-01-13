@@ -17,7 +17,7 @@
 
 <body>
 	<div class="nav">
-	    <p id="website-name">Keoabetswe <strong>Nthite</strong></p>
+	    <p id="website-name">Keo'Abetswe <strong>Nthite</strong></p>
 
 	    <label for="toggle">&#9776;</label>
 	    <input type="checkbox" id="toggle"/>
@@ -32,8 +32,8 @@
 	    </div>
 	</div>
 	
-	<h1 id="dev-title">Software Developer</h1>
-	<h3 id="tech-stack">Java | HTML/CSS | JavaScript | PHP | MySQL</h3>
+	<h1 id="dev-title">Junior Software Developer</h1>
+	<h3 id="tech-stack">Hello! I'm Keo Nthite</h3>
 	<section id="page">
 		<ul class="accordion">
 			<li>
@@ -43,22 +43,22 @@
 					<p id="accordion-text">Feel free to contact me for any enquiries, work opportunities, or collaborations.</p>
 				</div>
 			</li>
-			
 			<li>
-				<button class="accordion-control">Qualification</button>
+				<button class="accordion-control">Experience</button>
 				<div class="accordion-panel">
-					<p><a id="attachment-link" href="documents/Diploma in I.T.pdf" targget="_blank">Diploma in I.T (Software Development) 2016-2018</a></p>
-					<p id="attachment-link">BTech in I.T (Software Development) 2019-2020 *</p>
+					<p id="accordion-text">Graduate Software Engineer</p>
+					<p id="accordion-text"><a href="https://www.iress.com/">Iress</a> - Jan 2021 - Dec 2021</p>
+				</div>
+			</li>
+			<li>
+				<button class="accordion-control">Education</button>
+				<div class="accordion-panel">
+					<p>Diploma in I.T (Software Development)</p>
+					<p>Bachelor of Technology in I.T (Software Development)</p>
 				</div>
 			</li>
 
-			<li>
-				<button class="accordion-control">Curriculum Vitae</button>
-				<div class="accordion-panel">
-					<p><a id="attachment-link" href="documents/K. NTHITE CV.pdf" target="_blank">PDF</a></p>
-					<p><a id="attachment-link" href="documents/K Nthite CV.docx" target="_blank">Word</a></p>
-				</div>
-			</li>
+		
 		</ul>
     </section>
 		  
