@@ -52,7 +52,7 @@ if(isset($_GET["action"]))
 
 <body>
 	<div class="nav">
-	    <p id="website-name">Keoabetswe <strong>Nthite</strong></p>
+	    <p id="website-name">Keo'Abetswe <strong>Nthite</strong></p>
 
 	    <label for="toggle">&#9776;</label>
 	    <input type="checkbox" id="toggle"/>
