@@ -16,7 +16,7 @@
 
 <body>
 	<div class="nav">
-	    <p id="website-name">Keoabetswe <strong>Nthite</strong></p>
+	    <p id="website-name">Keo'Abetswe <strong>Nthite</strong></p>
 
 	    <label for="toggle">&#9776;</label>
 	    <input type="checkbox" id="toggle"/>
@@ -38,9 +38,9 @@
 	<div id="container">           
 		<div id="maincontent" class="col-md-8">
 			<h2 id="body-title">About</h2>
-				<p>I'm Keoabetswe Nthite a software developer and student at CPUT(Cape Peninsula University of Technology) in Cape Town, currently doing my BTech in I.T(Software Development).</p>
+				<p>I'm Keo'Abetswe Nthite a Junior Software Developer and a Graduate in Information Technology majoring in Software Development</p>
 					
-				<p>I currently hold a <a id="attachment-link" href="documents/K. NTHITE CV.pdf" target="_blank">Diploma in I.T (Software Development)</a> from Varsity College in Pretoria and I'm now pursuing a Degree. 
+				<p>I currently hold a Diploma in I.T (Software Development) from Varsity College and a Bachelor of Technology in I.T (Software Development) from Cape Peninsula University of Technology.</p>
 					I also volunteer at <a id="coderdojo-link" href="https://coderdojo.com/" target="_blank">CoderDojo</a>, 
 					which is a programming club that teaches young people to code.</p>
 						
@@ -50,26 +50,22 @@
 						
 					<div id="tech-stack-list">
 						<ul>
-							<li>Java</li>
-							<li>HTML/CSS</li>
-							<li>Bootstrap</li>
 							<li>JavaScript</li>
+							<li>React</li>
+							<li>Python</li>
+							<li>Java</li>
 							<li>PHP</li>		
+							<li>HTML/CSS</li>
+							<li>Bootstrap</li>						
 							<li>MySQL</li>
+							<li>Firebase</li>
+							<li>Heroku</li>
 							<li>Git</li>
 						</ul>
 					</div>	
-							
 		<!-- closes maincontent -->
-		</div>
-
-			<div id="sidebar" class="col-md-4">
-				<p>PDF Downloads</p>
-				<center><a id="attachment-link" href="documents/K. NTHITE CV.pdf" target="_blank">Curriculum Vitae</a></center>	
-				<center><a id="attachment-link" href="documents/Diploma in I.T.pdf" target="_blank">Qualification</a></center>	
-			</div>
-
-				
+		
+		</div>			
 			<!-- Sidebar content (large screen) -->
 			<div id="sidebar" class="col-md-4">
 				<div id="sidebar-image">
