@@ -25,7 +25,6 @@
 	    <div class="menu">
 		    <a href="index.php">Home</a>
 			<a href="about.php">About</a>
-			<a href="documents/K. NTHITE CV.pdf" target="_blank">CV</a>
    	        <a href="blog.php">Blog</a>
 	        <a href="portfolio.php">Portfolio</a>
    	        <a href="contact.php">Contact</a>
@@ -53,17 +52,15 @@
 			<li>
 				<button class="accordion-control">Education</button>
 				<div class="accordion-panel">
-					<p>Diploma in I.T (Software Development)</p>
-					<p>Bachelor of Technology in I.T (Software Development)</p>
+					<p id="accordion-text">Diploma in I.T (Software Development)</p>
+					<p id="accordion-text">Bachelor of Technology in I.T (Software Development)</p>
 				</div>
 			</li>
-
-		
 		</ul>
     </section>
 		  
 	<!-- break -->
-	<br/><br/>
+
 
 	<!-- footer -->
 	<div id="footer" class="col-lg-12">
