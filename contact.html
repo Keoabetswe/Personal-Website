@@ -45,26 +45,30 @@
 		<br />
 
 		<!-- contact Form -->
-		<form method="post" action="https://formsubmit.co/keonthite.co.za">
+		<form method="post" action="https://formsubmit.co/keonthite@gmail.com">
 			<input type="hidden" name="_next" value="https://keonthite.co.za/thank-you.html">
 			<input type="hidden" name="_subject" value="Personal Website Enquiry">
 			<input type="hidden" name="_captcha" value="false">
 			<input type="hidden" name="_cc" value="keo.nthite@gmail.com">
 			<center>
 				<div class="input-contact">
-					<input type="text" placeholder="Name" name="name" required="required">
+					<input type="text" placeholder="Name" name="name" id="name" required="required">
 				</div>
 
 				<div class="input-contact">
-					<input type="text" placeholder="Email" name="email" required="required">
+					<input type="email" placeholder="Email" name="email" id="email" required="required">
 				</div>
 
 				<div class="input-contact">
-					<textarea cols="3" rows="3" placeholder="Message" name="message" required="required"></textarea>
+					<input type="text" placeholder="Subject" name="subject" id="subject" required="required">
 				</div>
 
 				<div class="input-contact">
-					<input type="submit" class="btn btn-contact submit" name="contact" value="Submit" />
+					<textarea cols="3" rows="3" placeholder="Message" name="message" id="message" required="required"></textarea>
+				</div>
+
+				<div class="input-contact">
+					<button type="submit" class="btn btn-contact submit" name="contact" id="contact" value="Submit">Submit</button>
 				</div>
 			</center>
 		</form>
