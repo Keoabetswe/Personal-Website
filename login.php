@@ -30,7 +30,7 @@ session_start();
 			<a href="about.php">About</a>
 			<a href="blog.php">Blog</a>
 			<a href="portfolio.html">Portfolio</a>
-			<a href="contact.php">Contact</a>
+			<a href="contact.html">Contact</a>
 		</div>
 		<br />
 	</div>
