@@ -29,7 +29,7 @@ session_start();
 			<a href="index.php">Home</a>
 			<a href="about.php">About</a>
 			<a href="blog.php">Blog</a>
-			<a href="portfolio.php">Portfolio</a>
+			<a href="portfolio.html">Portfolio</a>
 			<a href="contact.php">Contact</a>
 		</div>
 		<br />
